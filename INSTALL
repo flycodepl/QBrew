@@ -1,0 +1,88 @@
+QBrew Installation
+===================
+
+These instructions are for building and installing QBrew from source
+code. QBrew requires the Qt 4.3 or greater development libraries. These
+can be found at <http://www.trolltech.com>. Some Linux distributions
+separate Qt into separate runtime and development packages. If this
+is your case, Make sure you have both. QBrew uses the qmake tool to
+generate makefiles, and thus depends on a properly configured Qt
+installation.
+
+Note that I am not providing installation support for QBrew, and will
+consider such a submission to be a bug report as opposed to a support
+request. I can be contacted at <david@usermode.org>.
+
+Sincerely,
+David Johnson
+
+Unix Build
+==========
+
+0) Make sure the prerequisite Qt library is installed.
+
+1) Unarchive the source code package, and change into its directory.
+
+2) Type './configure --help", and peruse the configure options available.
+   It may be necessary to use one or more of these options on your system.
+
+3) Type './configure' to configure the package for your system. If you're
+   using `csh', you might need to type `sh ./configure' instead.
+
+4) Type 'make' to compile the package.
+
+5) Login, su or sudo to root. This is not necessary if you
+   configured the package to install to your home directory.
+
+6) Type 'make install' to install the program and documentation.
+
+7) Type `qbrew' to run the program.
+
+Mac OSX Build
+=============
+
+0) Make sure the prerequisite Qt library is installed.
+
+1) Unarchive the source code package, and change into its directory.
+
+2) Set Qt related environment variables (assumes bash shell):
+       QTDIR=/Developer/qt (or as appropriate)
+       QMAKESPEC=macx-g++
+       PATH=$PATH:$QTDIR/bin
+       export QTDIR QMAKESPEC PATH
+
+3) Build the package:
+       qmake -o Makefile qbrew.pro
+       make
+
+4) Populate the application bundle
+        make install
+
+5) You may wish to include the Qt runtime with the application bundle. Please
+   see the "Deploying on Application on Qt/Mac" article for more information.
+   A deployment script is included in the mac directory, that may be useful.
+
+6) Now move the application bundle to your desired location
+        mv qbrew.app ~/Desktop
+
+Windows Build
+=============
+
+0) Make sure the prerequisite Qt library is installed.
+
+1) Unarchive the source code package, and change into its directory.
+
+2) Build the package:
+       qmake qbrew.pro
+       make (or nmake)
+
+4) Place into a final installation directory, with the following minimum
+   structure:
+       qbrew.exe
+       splash.png
+       datafile
+       doc\html\* (all html help files)
+       translations\* (all qm files)
+
+5) You may also wish to include the Qt DLL and other runtime libraries in the
+   installation directory.

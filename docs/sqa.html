@@ -1,0 +1,1063 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta name="generator" content="HTML Tidy, see www.w3.org">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>
+      QBrew Test Procedure
+    </title>
+  </head>
+  <body>
+    <h1>
+      QBrew Test Procedure
+    </h1>
+    <h2>
+      Setup
+    </h2>
+    <p>
+      This procedure will make use of the the included files
+      <code>paleale.qbrew</code> and
+      <code><strong>stout.qbrew</strong></code>. In addition, the
+      <em><strong>Configure</strong></em> dialog should be set with default
+      values using the <em><strong>Defaults</strong></em> buttons.
+    </p>
+    <h2>
+      User Interface
+    </h2>
+    <h3>
+      Command Line
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that the following command line options result in the
+        indicated behavior under Unix:
+        <table cellpadding="4" cellspacing="0" border="2">
+          <col>
+          <col>
+          <thead>
+            <tr valign="TOP">
+              <td>
+                file
+              </td>
+              <td>
+                Open the specified file in QBrew
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr valign="TOP">
+              <td>
+                -help
+              </td>
+              <td>
+                Print the command line options
+              </td>
+            </tr>
+            <tr valign="TOP">
+              <td>
+                -version
+              </td>
+              <td>
+                Print the version number of QBrew
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        [___] Verify that all other command line options displayed by the
+        <code>-help</code> option are currently used by Qt and behave as
+        described.
+      </li>
+    </ul>
+    <h3>
+      Menubar
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that all menu accelerators work and are mapped to the
+        appropriate keystroke
+      </li>
+      <li>
+        [___] Verify that an appropriate help message is displayed in the
+        statusbar when each menu item is highlighted
+      </li>
+    </ul>
+    <h3>
+      File Menu
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that the <em><strong>File-&gt;New</strong></em> menu
+        item creates a new, blank recipe
+      </li>
+      <li>
+        [___] Verify the <em><strong>File-&gt;Open...</strong></em> menu item
+        opens an existing recipe file
+      </li>
+      <li>
+        [___] Verify the <em><strong>File-&gt;Open Recent</strong></em> item
+        displays a submenu of recently opened files
+      </li>
+      <li>
+        [___] Verify the <em><strong>File-&gt;Save</strong></em> menu item
+        save the current recipe to a recipe file under the same file name. If
+        this is a new recipe, verify this behaves identically to the
+        <em><strong>File-&gt;Save as...</strong></em> menu item
+      </li>
+      <li>
+        [___] Verify the <em><strong>File-&gt;Save as...</strong></em> menu
+        item saves the current recipe to a recipe file, prompting for a new
+        file name, and prompting to overwrite existing files if applicable
+      </li>
+      <li>
+        [___] Verify the
+        <em><strong>File-&gt;Export...</strong></em> menu
+        item exports the current recipe to a different format, prompting
+        for a filename, and prompting to overwrite existing files if
+        applicable
+      </li>
+      <li>
+        [___] Verify the <em><strong>File-&gt;Print Preview...</strong></em>
+	menu item brings up a print preview dialog
+      </li>
+      <li>
+        [___] Verify the <em><strong>File-&gt;Print...</strong></em> menu
+        item brings up a print dialog that prints the recipe
+      </li>
+      <li>
+        [___] Verify the <em><strong>File-&gt;Quit</strong></em> menu item
+        quits the application, after prompting to save any unsaved recipes
+      </li>
+    </ul>
+    <h3>
+      Tools Menu
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify the <em><strong>Tools-&gt;Alcohol
+        Percentage</strong></em> menu item brings up the Alcohol Tool window
+      </li>
+      <li>
+        [___] Verify the <em><strong>Tools-&gt;Hydrometer
+        Correction</strong></em> menu item brings up the Hydrometer Tool
+        window
+      </li>
+      <li>
+        [___] Verify the <em><strong>Tools-&gt;Database
+        Editor</strong></em> menu item brings up the database editor
+      </li>
+    </ul>
+    <h3>
+      Options Menu
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify the <em><strong>Options-&gt;Main Toolbar</strong></em>
+	menu item toggles the toolbar between enabled and disabled states
+      </li>
+      <li>
+        [___] Verify the <em><strong>Options-&gt;Statusbar</strong></em> menu
+        item toggles the statusbar between enabled and disabled states
+      </li>
+      <li>
+        [___] Verify the <em><strong>Options-&gt;Configure...</strong></em>
+        menu item brings up the configure dialog
+      </li>
+    </ul>
+    <h3>
+      Help Menu
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify the <em><strong>Help-&gt;Contents...</strong></em> menu
+        item brings up a browser window displaying the application's user
+        manual
+      </li>
+      <li>
+        [___] Verify the <em><strong>Help-&gt;Primer...</strong></em> menu
+        item brings up a browser window displaying a brewing primer
+      </li>
+      <li>
+        [___] Verify the <em><strong>What's This?</strong></em> menu item
+        brings up cursor used to select help on specific controls
+      </li>
+      <li>
+        [___] Verify the <em><strong>Help-&gt;About...</strong></em> menu
+        item brings up a message box displaying the application's copyright
+        information
+      </li>
+    </ul>
+    <h3>
+      Toolbar
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that the following buttons are on the toolbar by
+        default: <em><strong>New</strong></em>,
+        <em><strong>Open</strong></em>, <em><strong>Save</strong></em>,
+        <em><strong>Print</strong></em>, and
+        <em><strong>Context</strong></em>
+      </li>
+      <li>
+        [___] Verify that all buttons in the toolbar correspond to a menu
+        item in the menubar
+      </li>
+      <li>
+        [___] Verify that each button in the toolbar has an appropriate
+        tooltip and an appropriate <em><strong>Context</strong></em> help
+        entry
+      </li>
+      <li>
+        [___] Verify that the toolbar can be docked to each side of the
+        application
+      </li>
+    </ul>
+    <h3>
+      Statusbar
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that the statusbar has only a message area
+      </li>
+      <li>
+        [___] Verify that the statusbar displays no message longer than two
+        seconds
+      </li>
+    </ul>
+    <h3>
+      Configure Dialog
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that all controls are visible in the dialog box
+      </li>
+      <li>
+        [___] Verify that pressing <em><strong>OK</strong></em> or
+        <em><strong>Cancel</strong></em> removes the dialog window
+      </li>
+      <li>
+        [___] Verify that pressing <em><strong>Apply</strong></em> of
+        <em><strong>OK</strong></em> makes all changes take effect
+        immediately (as appropriate)
+      </li>
+      <li>
+        [___] Verify that pressing the <em><strong>Reset</strong></em>
+        button resets all dialog controls to default values
+      </li>
+      <li>
+        [___] Verify that all options in a dialog page are related to the
+        title of the page
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Look and feel</strong></em>
+        combobox is used to select a Qt widget style
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Show splash screen</strong></em>
+        checkbox is used to select whether the splash screen is shown
+        at program start
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Number of recent
+        files</strong></em> spinbox selects the number of files displayed in
+        the <em><strong>Open Recent</strong></em> submenu
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Enable autosave</strong></em>
+        checkbox and spinbox set autosave functionality, where the currently
+        edited file will be automatically saved according to the selected
+        interval
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Enable autobackup</strong></em>
+        checkbox sets autobackup functionality, where a backup will be
+        created upon saving changes to a recipe
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Load last file</strong></em>
+        checkbox will cause the application to automatically load the last
+        recipe used
+      </li>
+      <li>
+        [___] Verify the <em><strong>Measurement units</strong></em> combo
+        box contains entries for <em><strong>Metric</strong></em> and
+        <em><strong>US</strong></em>
+      </li>
+      <li>
+        [___] Verify that while the <em><strong>Measurement
+        units</strong></em> option is set to
+        <em><strong>Metric</strong></em>, all subsequent units will be in
+        Metric (grams, kilograms, liters)
+      </li>
+      <li>
+        [___] Verify that while the <em><strong>Measurement
+        units</strong></em> option is set to <em><strong>US</strong></em>,
+        all subsequent units will be in US measurements (ounces, pounds,
+        gallons)
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Mash efficiency</strong></em>
+        spinbox sets the recipe mash efficiency, in the range of 0.00 to 1.00
+        in increments of 0.01
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Steep yield</strong></em>
+        spinbox sets the yield for steeped grains, in the range of 0.00 to 1.00
+        in increments of 0.01
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Use Tinseth</strong></em> checkbox
+        toggles the application calculation routines to use the Tinseth
+        bitterness formula instead of the default (Rager) bitterness formula
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Use Morey</strong></em> checkbox
+        toggles the application calculation routines to use the Morey color
+        formula instead of the default (Daniels) color formula
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Batch size</strong></em> spinbox
+        selects the default back size for new recipes, in the range of 0.00
+        to 100.00 in increments of 0.25
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Recipe style</strong></em> combobox
+        selects the default recipe style for new recipes
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Hop Type</strong></em> combobox
+        selects the default hop type for new hop ingredients
+      </li>
+    </ul>
+    <h3>
+      Alcohol Tool
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that the <em><strong>Original gravity</strong></em>
+        spinbox ranges from 0.900 to 1.400 in increments of 0.001
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Final gravity</strong></em> spinbox
+        ranges from 0.900 to 1.400 in increments of 0.001
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Alcohol by Volume</strong></em>
+        label displays the calculated ABV
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Alcohol by Weight</strong></em>
+        label displays the calculated ABW
+      </li>
+    </ul>
+    <h3>
+      Hydrometer Tool
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that the <em><strong>Sample temperature</strong></em>
+        spinbox has the suffix of "&deg;F", and ranges from 32.0 to 212.0 in
+        increments of 0.2. If Metric measurements are used, verify that the
+        suffix is "&deg;C", and ranges from 0.0 to 100.0 degrees.
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Calibrated temperature</strong></em>
+        spinbox has the suffix of "&deg;F", and  ranges from 32.0 to 212.0 in
+        increments of 0.2. If Metric measurements are used, verify that the
+        suffix is "&deg;C", and ranges from 0.0 to 100.0 degrees.
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Hydrometer reading</strong></em>
+        spinbox has no suffix and ranges from 0.850 to 1.200 in increments of
+        0.001
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Corrected reading</strong></em>
+        label has no suffix, and changes as the values in the spinboxes
+        change
+      </li>
+    </ul>
+    <h3>
+      Database Editor
+    </h3>
+    <h4>
+      Grains
+    </h4>
+    <ul type="none">
+      <li>
+        [___] Verify that selecting the
+        <em><strong>Grains</strong></em> tab changes the list section
+        to controls for grain ingredients
+      </li>
+      <li>
+        [___] Verify that the list of ingredients in the displayed in
+        the list section matches the selection available in the
+        database file
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Grain</strong></em> field can be
+	edited by the user
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Extract</strong></em> field can be
+	edited and its spinbox ranges from 1.000 to 1.100 in increments of
+	0.001
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Color</strong></em> field can be
+	edited and its spinbox ranges from 0.0 to 500.0 in increments of
+	1.0
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Type</strong></em> field combobox has
+        the entries of <em>Grain</em>, <em>Extract</em>, <em>Adjunct</em>,
+        <em>Sugar</em> and <em>Other</em>, and that the  combobox is not user
+        editable.
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Use</strong></em> field combobox has
+	the entries of <em>Extract</em>, <em>Mashed</em>, <em>Steeped</em>,
+        and <em>Other</em>, and that the combobox is not user editable
+      </li>
+      <li>
+        [___] Verify that setting the <em><strong>Grain</strong></em> field of
+	an entry to blank removes the grain from the list
+      </li>
+      <li>
+        [___] Verify that attempting to add a grain that already
+        exists in the database will prompt a confirmation dialog
+      </li>
+    </ul>
+    <h4>
+      Hops
+    </h4>
+    <ul type="none">
+      <li>
+        [___] Verify that selecting the <em><strong>Hops</strong></em> tab
+        changes the list section to controls for hop ingredients
+      </li>
+      <li>
+        [___] Verify that the list of ingredients in the displayed in
+        the list section matches the selection available in the
+         database file
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Hop</strong></em> field combobox can
+	be edited by the use
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Alpha</strong></em> field has a
+	spinbox with a suffix of "%", and ranges from 0.0 to 50.0 in increments
+	of 0.1
+      </li>
+      <li>
+        [___] Verify that setting the <em><strong>Hop</strong></em> field of an
+	entry to blank removes the hop from the list
+      </li>
+      <li>
+        [___] Verify that attempting to add a hop that already
+        exists in the database will prompt a confirmation dialog
+      </li>
+    </ul>
+    <h4>
+      Miscellaneous
+    </h4>
+    <ul type="none">
+      <li>
+        [___] Verify that selecting the
+        <em><strong>Miscellaneous</strong></em> tab changes the ingredients
+        section to controls for miscellaneous ingredients
+      </li>
+      <li>
+        [___] Verify that the list of ingredients in the displayed in
+        the list section matches the selection available in the
+        database file
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Misc</strong></em> field has a
+	combobox that can be edited by the user
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Type</strong></em> field has a
+	combobox with the entries <em>Yeast</em>, <em>Fining</em>,
+       <em>Herb</em>, <em>Spice</em>, <em>Flavor</em>, <em>Additive</em> and
+       <em>Other</em>.
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Notes</strong></em> field has an
+	editbox which is editable by the user
+      </li>
+      <li>
+        [___] Verify that setting the <em><strong>Misc</strong></em> field of
+	an entry to blank removes the ingredient from the list
+      </li>
+      <li>
+        [___] Verify that attempting to add an ingredient that already
+        exists in the database will prompt a confirmation dialog
+      </li>
+    </ul>
+    <h4>
+      Styles
+    </h4>
+    <ul type="none">
+      <li>
+        [___] Verify that selecting the
+        <em><strong>Styles</strong></em> tab changes the list section
+        to controls for styles
+      </li>
+      <li>
+        [___] Verify that the list of styles in the displayed in
+        the list section matches the selection available in the
+        database file
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Style</strong></em> field has a
+	combobox that can be edited by the user
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Min. OG</strong></em> and
+        <em><strong>Max. OG</strong></em> fields have spinboxes that
+        range from 1.000 to 1.150 in increments of 0.001
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Min. OG</strong></em>
+        spinbox has a maximum value equal to the minimum value of the
+        <em><strong>Max. OG</strong></em> spinboxes, and vice versa
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Min. FG</strong></em> and
+        <em><strong>Max. FG</strong></em> fields have spinboxes that
+        range from 1.000 to 1.150 in increments of 0.001
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Min. FG</strong></em>
+        spinbox has a maximum value equal to the minimum value of the
+        <em><strong>Max. FG</strong></em> spinboxes, and vice versa
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Min. IBU</strong></em> and
+        <em><strong>Max. IBU</strong></em> fields have spinboxes that
+        range from 0 to 120 in increments of 1
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Min. IBU</strong></em>
+        spinbox has a maximum value equal to the minimum value of the
+        <em><strong>Max. IBU</strong></em> spinboxes, and vice versa
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Min. SRM</strong></em> and
+        <em><strong>Max. SRM</strong></em> fields have spinboxes that
+        range from 0 to 50 in increments of 1
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Min. SRM</strong></em>
+        spinbox has a maximum value equal to the minimum value of the
+        <em><strong>Max. SRM</strong></em> spinboxes, and vice versa
+      </li>
+      <li>
+        [___] Verify that setting the <em><strong>Style</strong></em> field of
+	an entry to blank removes the style from the list
+      </li>
+      <li>
+        [___] Verify that attempting to add an style that already
+        exists in the database will prompt a confirmation dialog
+      </li>
+    </ul>
+    <h3>
+      Help Browser
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that the <em><strong>Contents</strong></em> and
+        <em><strong>Primer</strong></em> help browser contains
+        <em><strong>File-&gt;Print...</strong></em>,
+        <em><strong>File-&gt;Quit</strong></em>,
+        <em><strong>Navigate-&gt;Backward</strong></em>,
+        <em><strong>Navigate-&gt;Forward</strong></em>, and
+        <em><strong>Navigate-&gt;Home</strong></em> menu items.
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Contents</strong></em> and
+        <em><strong>Primer</strong></em> help browser contains
+        <em><strong>Back</strong></em>, <em><strong>Forward</strong></em>,
+        <em><strong>Home</strong></em>, <em><strong>Print</strong></em> and
+        <em><strong>Quit</strong></em> toolbar buttons
+      </li>
+      <li>
+        [___] Verify that local links embedded in the
+        <em><strong>Contents</strong></em> and
+        <em><strong>Primer</strong></em> help browser content are active and
+        usable
+      </li>
+    </ul>
+    <h3>
+      Recipe and Characteristics
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that the <em><strong>Title</strong></em> and
+        <em><strong>Brewer</strong></em> editboxes have no effect on any
+        recipe calculations or other displayed information
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Style</strong></em> combobox
+        displays a list of beer styles corresponding to all style entries in
+        the <code><strong>qbrewdata</strong></code> file
+      </li>
+      <li>
+        [___] Verify that changing the <em><strong>Style</strong></em>
+        combobox entry immediately changes the <em><strong>Minimum
+        Gravity</strong></em>, <em><strong>Maximum Gravity</strong></em>,
+        <em><strong>Minimum Bitterness</strong></em>, <em><strong>Maximum
+        Bitterness</strong></em>, <em><strong>Minimum Color</strong></em> and
+        <em><strong>Maximum Color</strong></em> labels in the
+        <em><strong>Characteristics</strong></em> frame, as well as the
+        <em><strong>Characteristics</strong></em> frame's title
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Size</strong></em> spinbox displays
+        the application batch size (set in the
+        <em><strong>Configure</strong></em> dialog) by default, with a range
+        from 0.00 to 5000.00 in increments of 0.25
+      </li>
+      <li>
+        [___] Verify that any changes to the <em><strong>Size</strong></em>
+        spinbox results in an immediate change to the <em><strong>Recipe
+        Gravity</strong></em>, <em><strong>Recipe Bitterness</strong></em>,
+        <em><strong>Recipe Color</strong></em>, <em><strong>Estimated
+        FG</strong></em>, <em><strong>Alcohol by Volume</strong></em> and
+        <em><strong>Alcohol by Weight</strong></em> labels in the
+        <em><strong>Characteristics</strong></em> frame
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Characteristics</strong></em> frame
+        displays style information in normal text, and recipe information in
+        bold text
+      </li>
+    </ul>
+    <h3>
+      Grains
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that selecting the <em><strong>Grains</strong></em> tab
+        changes the ingredients section to controls for grain ingredients
+      </li>
+      <li>
+        [___] Verify that the combobox for the <em><strong>Grain</strong></em>
+	field contains a list of grains corresponding to those in the
+	<code><strong>qbrewdata</strong></code> database
+      </li>
+      <li>
+        [___] Verify that the edit field of the
+        <em><strong>Grain</strong></em> combobox can be edited by the user
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Quantity</strong></em> spinbox
+        has the suffix of "lb" by default, and ranges from 0.00 to 1000.00 in
+        increments of 0.25
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Extract</strong></em> spinbox
+        ranges from 1.000 to 1.100 in increments of 0.001
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Color</strong></em> spinbox
+        ranges from 0.0 to 500.0 in increments of 1.0, and has a suffix of a
+	degree sign.
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Type</strong></em> field combobox has
+        the entries of <em>Grain</em>, <em>Extract</em>, <em>Adjunct</em>,
+        <em>Sugar</em> and <em>Other</em>, and that the  combobox is not user
+        editable.
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Use</strong></em> combobox has the
+        entries of "<em>extract</em>", "<em>mashed</em>", "<em>steeped</em>"
+        and "<em>other</em>", and that the combobox edit field is not user
+        editable
+      </li>
+      <li>
+        [___] Verify that setting the <em><strong>Grain</strong></em> field of
+	an entry to blank removes the grain from the list
+      </li>
+      <li>
+        [___] Verify that using the [+] and [-] buttons will add or remove a
+	grain from the list
+      </li>
+    </ul>
+    <h3>
+      Hops
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that selecting the <em><strong>Hops</strong></em> tab
+        changes the ingredients section to controls for hop ingredients
+      </li>
+      <li>
+        [___] Verify that the combobox for the <em><strong>Hop</strong></em>
+	field contains a list of hops corresponding to those in the
+	<code><strong>qbrewdata</strong></code> database
+      </li>
+      <li>
+        [___] Verify that the edit field of the
+        <em><strong>Hop</strong></em> combobox can be edited by the user
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Quantity</strong></em> spinbox
+        has the suffix of "<em>oz</em>" by default, and ranges from 0.00 to
+        1000.00 in increments of 0.25
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Type</strong></em> combobox
+        includes the entries of "<em>Pellet</em>", "<em>Plug</em>" and
+        "<em>Whole</em>" by default, and that the edit field of the combox is
+        user editable
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Alpha</strong></em> spinbox has a
+        suffix of "%", and ranges from 0.0 to 50.0 in increments of 0.1
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Time</strong></em> spinbox has a
+        suffix of "<em>min</em>", and ranges from 0 to 120 in increments of 5
+      </li>
+      <li>
+        [___] Verify that setting the <em><strong>Hop</strong></em> field of
+	an entry to blank removes the hop from the list
+      </li>
+      <li>
+        [___] Verify that using the [+] and [-] buttons will add or remove a
+	hop from the list
+      </li>
+    </ul>
+    <h3>
+      Miscellaneous
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that selecting the
+        <em><strong>Miscellaneous</strong></em> tab changes the ingredients
+        section to controls for miscellaneous ingredients
+      </li>
+      <li>
+        [___] Verify that the combobox for the <em><strong>Misc</strong></em>
+	field contains a list of ingredients corresponding to those in the
+	<code><strong>qbrewdata</strong></code> database
+      </li>
+      <li>
+        [___] Verify that the edit field of the
+        <em><strong>Misc</strong></em> combobox can be edited by the user
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Quantity</strong></em> spinbox
+        has the suffix of "<em>unit</em>" by default, and ranges from 0.00 to
+        1000.00 in increments of 0.25
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Notes</strong></em> editbox is
+        editable by the user
+      </li>
+      <li>
+        [___] Verify that setting the <em><strong>Misc</strong></em> field of
+	an entry to blank removes the ingredient from the list
+      </li>
+      <li>
+        [___] Verify that using the [+] and [-] buttons will add or remove an
+	ingredient from the list
+      </li>
+    </ul>
+    <h3>
+      Notes
+    </h3>
+    <ul type="none">
+      <li>
+        [___] Verify that the <em><strong>Recipe Notes</strong></em> edit box
+        can be edited with user text
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Recipe Notes</strong></em> are
+        initially empty on a new file, upon started the application and upon
+        selecting a new recipe after the notes have been modified
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Recipe Notes</strong></em> can be
+        saved with a recipe, and restored upon opening a recipe
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Batch Notes</strong></em> edit box
+        can be edited with user text
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Batch Notes</strong></em> are
+        initially empty on a new file, upon started the application and upon
+        selecting a new recipe after the notes have been modified
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Batch Notes</strong></em> can be
+        saved with a recipe, and restored upon opening a recipe
+      </li>
+    </ul>
+    <h3>
+      Calculations
+    </h3>
+    <p>
+      Using the indicated files, verify the following values in the
+      Characteristics frame:
+    </p>
+    <ul type="none">
+      <li>
+        [___] Verify with a <code><strong>qbrewdata</strong></code>
+        file from version 0.3.0, that the DATA_PREVIOUS in
+        <code><strong>resource.h</strong></code> value is still valid.
+      </li>
+      <li>
+        [___] Verify with the
+        <code><strong>paleale.qbrew</strong></code> recipe, that
+        changing the recipe <em><strong>Size</strong></em> to 10.0
+        results in a Gravity of 1.029, Bitterness of 26, Color of 8
+        without the <em><strong>Use Morey</strong></em> checked (6
+        with), Estimated FG of 1.007, Alcohol by Volume of 2.8 and
+        Alcohol by Weight of 2.2
+      </li>
+      <li>
+        [___] Verify with the <code><strong>stout.qbrew</strong></code>
+        recipe, that changing the <em><strong>Mash efficiency</strong></em>
+        to 83 results in a Gravity of 1.078, Bitterness of 80, Estimated FG
+        of 1.019, Alcohol by Volume of 7.5, and Alcohol by Weight of 5.9, and
+        that Color has not changed
+      </li>
+      <li>
+        [___] Verify with the <code><strong>paleale.qbrew</strong></code>
+        recipe, that changing the <em><strong>Extract</strong></em> of the
+        Light malt extract to 1.044 results in a Gravity of 1.09, Bitterness
+        of 47, and that Color has not changed
+      </li>
+      <li>
+        [___] Verify with the <code><strong>stout.qbrew</strong></code>
+        recipe, that changing the <em><strong>Use</strong></em> of the
+        British chocolate malt to "steeped" results in a Gravity of 1.067,
+        Bitterness of 84, and that Color has not changed
+      </li>
+      <li>
+        [___] Verify with the <code><strong>paleale.qbrew</strong></code>
+        recipe, that adding 5 minutes to each hop
+        <em><strong>Time</strong></em> results in a Bitterness of 59 without
+        the <em><strong>Use Tinseth</strong></em> checked, 56 with the
+        <em><strong>Use Tinseth</strong></em> checked, and that Gravity and
+        Color have not changed
+      </li>
+      <li>
+        [___] Verify with the <code><strong>stout.qbrew</strong></code>
+        recipe, that changing the <em><strong>Alpha</strong></em> for all
+        hops to 9.6 results in a Bitterness of 86 without the <em><strong>Use
+        Tinseth</strong></em> checked, 72 with the <em><strong>Use
+        Tinseth</strong></em> checked, and that Gravity and Color have not
+        changed
+      </li>
+      <li>
+        [___] Verify with either recipe, that any changes to
+        <em><strong>Miscellaneous</strong></em> ingredients do not change any
+        recipe characteristics
+      </li>
+    </ul>
+    <p>
+      Without changing any default values, create a new recipe with the 7.0
+      pounds of mashed British two-row (1.038 extract, 2.5 color), 1 pound of
+      steeped CaraMunich (1.033 extract, 75.0 color), 1 ounce of pellet
+      Tettnanger (3.7 alpha) at 60 minutes, 0.5 ounces of whole Saaz (3.5
+      alpha) at 10 minutes, and 1 unit of Lager yeast
+    </p>
+    <ul type="none">
+      <li>
+        [___] Verify that this recipe results in a Gravity of 1.043,
+        Bitterness of 17 without <em><strong>Use Tinseth</strong></em>
+        checked (16 with), Color of 12 without <em><strong>Use
+        Morey</strong></em> checked (11 with), Estimated FG of 1.011, Alcohol
+        by Volume of 4.2 and Alcohol by Weight of 3.3
+      </li>
+    </ul>
+    <p>
+      Using the <em><strong>Hydrometer Tool</strong></em>, verify the
+      following:
+    </p>
+    <ul type="none">
+      <li>
+        [___] Verify that entering a <em><strong>Sample
+        temperature</strong></em> of 212.0, a <em><strong>Calibrated
+        temperature</strong></em> of 32.0, and a <em><strong>Hydrometer
+        reading</strong></em> of 1.100 results in a <em><strong>Corrected
+        reading</strong></em> of 1.148
+      </li>
+      <li>
+        [___] Verify that entering a <em><strong>Sample
+        temperature</strong></em> of 32.0, a <em><strong>Calibrated
+        temperature</strong></em> of 212.0, and a <em><strong>Hydrometer
+        reading</strong></em> of 1.000 results in a <em><strong>Corrected
+        reading</strong></em> of 0.96
+      </li>
+      <li>
+        [___] Verify that entering a <em><strong>Sample
+        temperature</strong></em> of 80.0, a <em><strong>Calibrated
+        temperature</strong></em> of 60.0, and a <em><strong>Hydrometer
+        reading</strong></em> of 1.065 results in a <em><strong>Corrected
+        reading</strong></em> of 1.067
+      </li>
+      <li>
+        [___] Verify that entering a <em><strong>Sample
+        temperature</strong></em> of 85.2, a <em><strong>Calibrated
+        temperature</strong></em> of 68.0, and a <em><strong>Hydrometer
+        reading</strong></em> of 1.077 results in a <em><strong>Corrected
+        reading</strong></em> of 1.080
+      </li>
+    </ul>
+    <p>
+      Set the configuration to Metric units, batch size of 15 liters, and
+      enter the following ingredients into a new recipe: mashed, American
+      two-row 4.0kg 1.037 extract 1.8 color, Columbus hops 10g pellet 15.4
+      alpha 60 time.
+    </p>
+    <ul type="none">
+      <li>
+        [___] Verify that the Recipe Gravity is 1.062, the Recipe Bitterness
+        is 27, the Recipe Color is 4, the ABV is 6.0 and the ABW is 4.7
+      </li>
+      <li>
+        [___] Verify that entering into the Alcohol tool an
+        <em><strong>Original gravity</strong></em> of 1.058 and a
+        <em><strong>Final gravity</strong></em> of 1.012 results in an ABV of
+        5.9% and ABW of 4.7%
+      </li>
+      <li>
+        [___] Verify that entering into the Alcohol tool an
+        <em><strong>Original gravity</strong></em> of 1.070 and a
+        <em><strong>Final gravity</strong></em> of 1.018 results in an ABV of
+        6.7% and ABW of 5.3%
+      </li>
+    </ul>
+    <h2>
+      Documentation
+    </h2>
+    <ul type="none">
+      <li>
+        [___] Verify that the user manual available under the
+        <em><strong>Help-&gt;Contents...</strong></em> contains correct
+        version and copyright dates.
+      </li>
+      <li>
+        [___] Verify that window titles for all online documentation are
+        formatted correctly. Errors can arise form newlines and nbsp tags.
+      </li>
+      <li>
+        [___] Verify that <em><strong>The Menus</strong></em> sections of the
+        user manual contain all available menu commands, with no unavailable
+        commands
+      </li>
+      <li>
+        [___] Verify that the <em><strong>Using QBrew</strong></em> sections
+        of the user manual are an accurate portrayal of the QBrew application
+      </li>
+      <li>
+        [___] Verify that the primer available under the
+        <em><strong>Help-&gt;Primer...</strong></em> contains correct
+        copyright dates.
+      </li>
+      <li>
+        [___] Verify that the information presented in the primer is not
+        dependant upon the use of the QBrew application
+      </li>
+      <li>
+        [___] Verify that the <code><strong>ChangeLog</strong></code> and
+        <code><strong>README</strong></code> files have the correct version and
+        copyright dates
+      </li>
+      <li>
+        [___] Verify that the html documentation is viewable in a variety of
+        browsers. Using the <code><strong>Konqueror</strong></code>
+        validation tool, or similar, validate the html.
+      </li>
+      <li>
+        [___] Verify that miscellaneous documentation contained in the
+        <code><strong>win</strong></code> and
+        <code><strong>mac</strong></code> directories are up to date and
+        accurate.
+      </li>
+    </ul>
+    <h2>
+      Miscellaneous
+    </h2>
+    <ul type="none">
+      <li>
+        [___] Verify that the text file created with the
+        <em><strong>File-&gt;Export...</strong></em> command using the
+        text format, is well formatted within the limitations of plain
+        text
+      </li>
+      <li>
+        [___] Verify that the HTML file created with the
+        <em><strong>File-&gt;Export...</strong></em> command using the
+        HTML format, is well formatted. Use
+        <code><strong>tidy</strong></code> for verification
+      </li>
+      <li>
+        [___] Verify that all controls (other than labels) have
+        <em><strong>What's This</strong></em> help available
+      </li>
+      <li>
+        [___] Verify by using <code><strong>ldd</strong></code> or a similar
+        command or method, that the requirements for QBrew are limited to
+        POSIX, X11 and Qt (and the requirements for those libraries)
+      </li>
+      <li>
+        [___] Verify that the default file extension for recipe files is
+        "<code><strong>qbrew</strong></code>"
+      </li>
+      <li>
+        [___] Verify that the default application configuration file on Unix
+        is <code><strong>~/.config/usermode/qbrew.conf</strong></code>, and
+	that the system registry or preferences facility is used under Windows
+	or Macintosh.
+      </li>
+      <li>
+        [___] Verify that if a file by the name of
+        <code><strong>.qbrewdata</strong></code> is present in the user's
+        home directory, that the data in this file will be used instead of
+        the defaults
+      </li>
+      <li>
+        [___] Verify that the following files are installed by default to
+        <code><strong>/usr/local/share/qbrew</strong></code>:
+        <code><strong>qbrewdata</strong></code>,
+        <code><strong>splash.png</strong></code>, and any available translations
+      </li>
+      <li>
+        [___] Verify that all files under
+        <code><strong>/usr/local/share/doc/qbrew</strong></code> with the
+        prefix of <code><strong>handbook-</strong></code> form a complete user
+        manual navigable with "Prev" and "Next" links
+      </li>
+      <li>
+        [___] Verify the existance of
+        <code><strong>LICENSE</strong></code>,and
+        <code><strong>README</strong></code>, files under
+        <code><strong>/usr/local/share/doc/qbrew</strong></code>
+      </li>
+      <li>
+        [___] Verify that using the instructions given in the
+        <code><strong>INSTALL</strong></code> file, that QBrew can be built
+        and executed on a variety of Unix and unix-like operating system
+      </li>
+      <li>
+        [___] Verify that the ui files in the source directory have Qt
+        versions of 4.0.
+      </li>
+      <li>
+        [___] Verify that the correct list of contributors is contained in
+        the <em><strong>About</strong></em> dialog and the documentation
+      </li>
+    </ul>
+  </body>
+</html>
+

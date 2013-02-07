@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta name="generator" content="HTML Tidy, see www.w3.org">
+    <meta http-equiv="Content-Type" content=
+    "text/html; charset=ISO-8859-1">
+    <title> Chapter 4. Questions and Answers</title>
+    <meta name="generator" content=
+    "DocBook XSL Stylesheets V1.71.1">
+    <link rel="start" href="handbook-index.html" title="The QBrew Handbook">
+    <link rel="up" href="handbook-index.html" title="The QBrew Handbook">
+    <link rel="prev" href="handbook-hop.html" title="Hop Calculations">
+    <link rel="next" href="handbook-credits.html" title=
+    "Appendix&nbsp;A.&nbsp;Credits">
+  </head>
+  <body bgcolor="white" text="black" link="#0000FF" vlink="#840084"
+  alink="#0000FF">
+    <div class="navheader">
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <th colspan="3" align="center">
+            Chapter&nbsp;4.&nbsp;Questions and Answers
+          </th>
+        </tr>
+        <tr>
+          <td width="20%" align="left">
+            <a accesskey="p" href="handbook-hop.html">Prev</a>&nbsp;
+          </td>
+          <th width="60%" align="center">
+            &nbsp;
+          </th>
+          <td width="20%" align="right">
+            &nbsp;<a accesskey="n" href="handbook-credits.html">Next</a>
+          </td>
+        </tr>
+      </table>
+      <hr>
+    </div>
+    <div class="chapter" lang="en">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title">
+              <a name="faq"></a>Chapter&nbsp;4.&nbsp;Questions and
+              Answers
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="qandaset">
+        <dl>
+          <dt>
+            Q: <a href="handbook-faq.html#id2566201">Why don't the results
+            on the Alcohol tool match the Characteristics section
+            of the main window?</a>
+          </dt>
+          <dt>
+            Q: <a href="handbook-faq.html#id2566235">I get hundreds of
+            errors when I try to compile QBrew under Unix. What am
+            I doing wrong?</a>
+          </dt>
+          <dt>
+            Q: <a href="handbook-faq.html#id2620357">Why don't you
+            distribute QBrew as a DEB or RPM file?</a>
+          </dt>
+        </dl>
+        <table border="0" summary="Q and A Set">
+          <col align="left" width="1%">
+          <tbody>
+            <tr class="question">
+              <td align="left" valign="top">
+                <a name="id2566201"></a><a name=
+                "id2566203"></a><b>Q:</b>
+              </td>
+              <td align="left" valign="top">
+                <p>
+                  Why don't the results on the <span class=
+                  "guilabel">Alcohol tool</span> match the <span
+                  class="guilabel">Characteristics</span> section
+                  of the main window?
+                </p>
+              </td>
+            </tr>
+            <tr class="answer">
+              <td align="left" valign="top">
+                <b>A:</b>
+              </td>
+              <td align="left" valign="top">
+                <p>
+                  It's the curse of rounding errors! When you use
+                  the <span class="guilabel">Alcohol tool</span>
+                  you are entering in gravity values with a
+                  precision of two decimal places. But your recipe
+                  in QBrew is stored with a much higher precision
+                  than this, even though it is displaying
+                  characteristics with a lower precision.
+                </p>
+              </td>
+            </tr>
+            <tr class="question">
+              <td align="left" valign="top">
+                <a name="id2566235"></a><a name=
+                "id2566237"></a><b>Q:</b>
+              </td>
+              <td align="left" valign="top">
+                <p>
+                  I get hundreds of errors when I try to compile
+                  <span class="application">QBrew</span> under
+                  Unix. What am I doing wrong?
+                </p>
+              </td>
+            </tr>
+            <tr class="answer">
+              <td align="left" valign="top">
+                <b>A:</b>
+              </td>
+              <td align="left" valign="top">
+                <p>
+                  <span class="application">QBrew</span> has been
+                  successfully compiled and run on a variety of
+                  Unix platforms, so the odds are low that
+                  something's wrong with configure (although it
+                  does happen). More likely, you don't have the
+                  necessary libraries or headers installed. Make
+                  sure that you have the X development libraries
+                  installed, as well as the Qt 4.3 or greater or
+                  greater development libraries. <span class=
+                  "application">QBrew</span> will not compile and
+                  link with the older Qt 3.x libraries.
+                </p>
+                <p>
+                  There are many useful options in the configure
+                  script. These options can be displayed by running
+                  <span><strong class="command">./configure
+                  --help</strong></span>. Also please read the
+                  INSTALL file for several useful tips.
+                </p>
+                <p>
+                  If you are still having problems after this, then
+                  write me at <code class="email">&lt;<a href=
+                  "mailto:qbrew@usermode.org">qbrew@usermode.org</a>&gt;</code>.
+                  Please include the full text of the error
+                  message, along with the <code class=
+                  "filename">config.log</code> in the build
+                  directory.
+                </p>
+              </td>
+            </tr>
+            <tr class="question">
+              <td align="left" valign="top">
+                <a name="id2620357"></a><a name=
+                "id2620359"></a><b>Q:</b>
+              </td>
+              <td align="left" valign="top">
+                <p>
+                  Why don't you distribute <span class=
+                  "application">QBrew</span> as a DEB or RPM file?
+                </p>
+              </td>
+            </tr>
+            <tr class="answer">
+              <td align="left" valign="top">
+                <b>A:</b>
+              </td>
+              <td align="left" valign="top">
+                <p>
+                  I do make packages available for Windows and Mac
+                  OSX. I am doing this because users of those
+                  platforms are unaccustomed to building software.
+                  It is more difficult to do this under Linux and
+                  Unix because there are so too many different
+                  varieties available. I cannot possibly distribute
+                  binary packages for each system and distribution
+                  while trying to keep up with changing versions.
+                </p>
+                <p>
+                  At this time, <span class=
+                  "application">QBrew</span> is already available
+                  prepackaged for Debian GNU/Linux, SuSE Linux,
+                  Linspire, NetBSD and FreeBSD. If you distribution
+                  does not have a <span class=
+                  "application">QBrew</span> package, you may wish
+                  to consider maintaining one for them. Please note
+                  that the available binary packages are not always
+                  the most recent <span class=
+                  "application">QBrew</span> version.
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="navfooter">
+      <hr>
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left">
+            <a accesskey="p" href="handbook-hop.html">Prev</a>&nbsp;
+          </td>
+          <td width="20%" align="center">
+            &nbsp;
+          </td>
+          <td width="40%" align="right">
+            &nbsp;<a accesskey="n" href="handbook-credits.html">Next</a>
+          </td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">
+            Hop Calculations&nbsp;
+          </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="handbook-index.html">Home</a>
+          </td>
+          <td width="40%" align="right" valign="top">
+            &nbsp;Appendix&nbsp;A.&nbsp;Credits
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
+

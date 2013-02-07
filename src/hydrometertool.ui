@@ -1,0 +1,226 @@
+<ui version="4.0" >
+ <class>HydrometerTool</class>
+ <widget class="QDialog" name="HydrometerTool" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>267</width>
+    <height>226</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Hydrometer Tool</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <property name="leftMargin" >
+    <number>9</number>
+   </property>
+   <property name="topMargin" >
+    <number>9</number>
+   </property>
+   <property name="rightMargin" >
+    <number>9</number>
+   </property>
+   <property name="bottomMargin" >
+    <number>9</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="hydrometerbox" >
+     <property name="title" >
+      <string>Hydrometer</string>
+     </property>
+     <layout class="QGridLayout" >
+      <property name="leftMargin" >
+       <number>9</number>
+      </property>
+      <property name="topMargin" >
+       <number>9</number>
+      </property>
+      <property name="rightMargin" >
+       <number>9</number>
+      </property>
+      <property name="bottomMargin" >
+       <number>9</number>
+      </property>
+      <property name="horizontalSpacing" >
+       <number>6</number>
+      </property>
+      <property name="verticalSpacing" >
+       <number>6</number>
+      </property>
+      <item row="4" column="1" >
+       <widget class="QLabel" name="corrected" >
+        <property name="text" >
+         <string>1.000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" >
+       <widget class="QLabel" name="correctedlabel" >
+        <property name="text" >
+         <string>Corrected reading</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" >
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="1" >
+       <widget class="QDoubleSpinBox" name="reading" >
+        <property name="whatsThis" >
+         <string>Enter the reading obtained from your hydrometer</string>
+        </property>
+        <property name="accelerated" >
+         <bool>true</bool>
+        </property>
+        <property name="decimals" >
+         <number>3</number>
+        </property>
+        <property name="minimum" >
+         <double>0.850000000000000</double>
+        </property>
+        <property name="maximum" >
+         <double>1.200000000000000</double>
+        </property>
+        <property name="singleStep" >
+         <double>0.001000000000000</double>
+        </property>
+        <property name="value" >
+         <double>1.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" >
+       <widget class="QDoubleSpinBox" name="calibrated" >
+        <property name="whatsThis" >
+         <string>Enter the temperature your hydrometer is calibrated for</string>
+        </property>
+        <property name="accelerated" >
+         <bool>true</bool>
+        </property>
+        <property name="decimals" >
+         <number>1</number>
+        </property>
+        <property name="minimum" >
+         <double>32.000000000000000</double>
+        </property>
+        <property name="maximum" >
+         <double>212.000000000000000</double>
+        </property>
+        <property name="singleStep" >
+         <double>0.200000000000000</double>
+        </property>
+        <property name="value" >
+         <double>60.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" >
+       <widget class="QLabel" name="readinglabel" >
+        <property name="text" >
+         <string>&amp;Hydrometer reading</string>
+        </property>
+        <property name="buddy" >
+         <cstring>reading</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="calibratedlabel" >
+        <property name="text" >
+         <string>&amp;Calibrated temperature</string>
+        </property>
+        <property name="buddy" >
+         <cstring>calibrated</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" >
+       <widget class="QLabel" name="samplelabel" >
+        <property name="text" >
+         <string>&amp;Sample temperature</string>
+        </property>
+        <property name="buddy" >
+         <cstring>sample</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="QDoubleSpinBox" name="sample" >
+        <property name="whatsThis" >
+         <string>Enter the temperature of your sample</string>
+        </property>
+        <property name="accelerated" >
+         <bool>true</bool>
+        </property>
+        <property name="decimals" >
+         <number>1</number>
+        </property>
+        <property name="minimum" >
+         <double>32.000000000000000</double>
+        </property>
+        <property name="maximum" >
+         <double>212.000000000000000</double>
+        </property>
+        <property name="singleStep" >
+         <double>0.200000000000000</double>
+        </property>
+        <property name="value" >
+         <double>60.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonbox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>sample</tabstop>
+  <tabstop>calibrated</tabstop>
+  <tabstop>reading</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonbox</sender>
+   <signal>accepted()</signal>
+   <receiver>HydrometerTool</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>133</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>133</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

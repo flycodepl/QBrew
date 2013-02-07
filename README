@@ -1,0 +1,51 @@
+QBrew, Version 0.4
+==================
+
+QBrew is a homebrewing recipe calculator for Unix, Macintosh and Windows. The
+QBrew homepage is at <http://www.usermode.org/code.html>.
+
+Please read the INSTALL file for installation instructions. Additional
+documentation can be found in the source tree under 'docs'.
+
+Please see the AUTHORS file for a list of contributors, and the ChangeLog file
+for a list of changes since the previous release.
+
+QBrew is released under a very liberal license which reflects the author's
+wishes with regards to this software. No payment or registration is required,
+but the author would be extremely delighted to receive bottles filled with
+homebrew created with QBrew. Photos of such bottles will do in a pinch. If you
+wish to contribute to the further inebriation of the author, please send mail
+to <david@usermode.org> requesting a physical address to send the bottles to.
+
+Cash or code contributions are, of course, always welcome, and will grease the
+wheels of QBrew development.
+
+====================
+
+Copyright (c) 1999-2008, David Johnson
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN
+NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+This product contains software written by Abe Kabakoff <abe_kabakoff@gmx.de>
+This product contains software written by Michal Palczewski <michalp@gmail.com>

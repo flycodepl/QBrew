@@ -1,0 +1,54 @@
+#! /bin/sh
+
+STYLESHEET=handbook.xsl
+HANDBOOK=handbook.docbook
+
+# check for xsltproc
+xsltfound=`which xsltproc`
+if [ -z "$xsltfound" ] ; then
+  echo "Error: xsltproc not found!"
+  echo "Please make sure xsltproc is installed and in your path"
+  exit
+fi
+
+# check for sed
+sedfound=`which sed`
+if [ -z "$sedfound" ] ; then
+  echo "Error: sed not found!"
+  echo "Please make sure sed is installed and in your path"
+  exit
+fi
+
+# check for tidy
+tidyfound=`which tidy`
+if [ -z "$tidyfound" ] ; then
+  echo "Warning: tidy not found!"
+fi
+
+# create output directory
+rm -rf book
+mkdir book
+cd book
+
+# process xml
+if [ -e ../$HANDBOOK ] ; then
+  echo "Processing $HANDBOOK"
+  xsltproc ../$STYLESHEET ../$HANDBOOK
+  if [ -n "$tidyfound" ] ; then
+    tidy -indent -quiet -modify *.html
+  fi
+  # add prefixes to filenames (would be nice if stylesheet could do this)
+  htmllist=`ls *.html`
+  for htmlfile in $htmllist ; do
+    filelist=`ls *.html`
+    for temp in $filelist ; do
+      sed -i .bak -e s/"$htmlfile"/handbook-$htmlfile/g $temp
+    done
+    mv ${htmlfile} handbook-${htmlfile}
+  done
+  rm -f *.bak
+else
+  echo "WARNING: $HANDBOOK not found"
+fi
+
+cd ..

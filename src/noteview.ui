@@ -1,0 +1,73 @@
+<ui version="4.0" >
+ <author></author>
+ <comment></comment>
+ <exportmacro></exportmacro>
+ <class>NoteView</class>
+ <widget class="QWidget" name="NoteView" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>NoteView</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <property name="margin" >
+    <number>9</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="recipelabel" >
+     <property name="text" >
+      <string>&amp;Recipe Notes</string>
+     </property>
+     <property name="buddy" >
+      <cstring>recipeedit</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="recipeedit" >
+     <property name="toolTip" >
+      <string>Recipe Notes</string>
+     </property>
+     <property name="statusTip" >
+      <string/>
+     </property>
+     <property name="whatsThis" >
+      <string>&lt;p>Use this form to enter in any notes relating to the recipe, such as specific brewing procedures or awards.&lt;/p></string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="batchlabel" >
+     <property name="text" >
+      <string>&amp;Batch Notes</string>
+     </property>
+     <property name="buddy" >
+      <cstring>batchedit</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="batchedit" >
+     <property name="toolTip" >
+      <string>Batch Notes</string>
+     </property>
+     <property name="whatsThis" >
+      <string>&lt;p>Use this form to enter in any notes relating to brewing batches of this recipe, such as brew and bottling dates.&lt;/p></string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <pixmapfunction></pixmapfunction>
+ <resources/>
+ <connections/>
+</ui>

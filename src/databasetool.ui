@@ -1,0 +1,91 @@
+<ui version="4.0" >
+ <class>DatabaseTool</class>
+ <widget class="QMainWindow" name="DatabaseTool" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Database Tool</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <layout class="QVBoxLayout" >
+    <property name="margin" >
+     <number>9</number>
+    </property>
+    <property name="spacing" >
+     <number>6</number>
+    </property>
+    <item>
+     <widget class="QTabWidget" name="ingredients" >
+      <property name="minimumSize" >
+       <size>
+        <width>0</width>
+        <height>128</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile" >
+    <property name="title" >
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionsave" />
+    <addaction name="separator" />
+    <addaction name="actionquit" />
+   </widget>
+   <addaction name="menuFile" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <action name="actionsave" >
+   <property name="icon" >
+    <iconset resource="../qbrew.qrc" >:/pics/icons/filesave.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Save</string>
+   </property>
+   <property name="statusTip" >
+    <string>Save the database</string>
+   </property>
+   <property name="whatsThis" >
+    <string/>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionquit" >
+   <property name="icon" >
+    <iconset resource="../qbrew.qrc" >:/pics/icons/exit.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Quit</string>
+   </property>
+   <property name="statusTip" >
+    <string>Close the database tool</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../qbrew.qrc" />
+ </resources>
+ <connections/>
+</ui>

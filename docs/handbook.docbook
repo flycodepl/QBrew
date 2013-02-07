@@ -1,0 +1,629 @@
+<?xml version='1.0'?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" [
+<!ENTITY qbrew          '<application>QBrew</application>'>
+<!ENTITY qbrew.version  "0.4.1">
+<!ENTITY qt.version     "4.3 or greater">
+]>
+
+<book id="handbook">
+  <bookinfo>
+    <title>The QBrew Handbook</title>
+
+    <author>
+      <firstname>David</firstname><surname>Johnson</surname>
+      <affiliation>
+        <address><email>david@usermode.org</email></address>
+      </affiliation>
+    </author>
+
+    <copyright>
+      <year>1999 - 2008</year>
+      <holder role="david@usermode.org">David Johnson</holder>
+    </copyright>
+
+    <legalnotice>
+      <para>Permission to use, copy, modify and distribute this
+      document for any purpose and without fee is hereby granted in
+      perpetuity, provided that the  above copyright notice and this
+      paragraph appear in all copies.</para>
+    </legalnotice>
+  </bookinfo>
+
+  <preface id="intro"> <title>Introduction</title>
+    <para>&qbrew; is a homebrewer's recipe calculator. With it a
+    brewer can formulate new recipes and calculate gravity,
+    bitterness, color and other attributes.</para>
+
+    <para>No payment or registration is required for &qbrew;, but the
+    author would be extremely delighted to receive spontaneous and
+    voluntarily donated bottles filled with homebrew. Photos of such
+    bottles will do in a pinch. If you wish to contribute to the
+    further inebriation of the author, please send mail to
+    <email>david@usermode.org</email> requesting a physical address to
+    send the bottles to.</para>
+
+    <para>The homepage for QBrew is
+    <ulink url="http://www.usermode.org/code.html">http://www.usermode.org/code.html</ulink></para>
+
+    <para>Code and cash contributions will, of course, grease the
+    wheels of QBrew development.</para>
+  </preface>
+
+  <chapter id="using">
+    <title>Using &qbrew;</title>
+
+    <section id="recipes">
+      <title>Recipes</title>
+
+      <section id="details">
+        <title>Basic Recipe Details</title>
+
+        <para>Enter in the basic recipe details in the top section of
+        the program window. There are fields for the title of the
+        recipe, the name of the brewer, recipe style, and batch size.</para>
+
+        <para>The name of the recipe and the brewer are for
+        identification purposes only. The recipe style will display the
+        appropriate style parameters in the characteristics area. The
+        batch size affects many calculations.</para>
+      </section>
+
+      <section id="ingredients">
+        <title>Recipe Ingredients</title>
+
+        <para>Recipe ingredients are added using the bottom section of
+        the program window. There are tabs for grains and other
+        fermentables, hops, and miscellaneous ingredients.</para>
+
+        <para>You can edit any field of an ingredient by double
+        clicking within it. To enter a new ingredient, double click in
+        the name field of a blank row. To remove an ingredient, set
+        its name field to a blank.</para>
+
+        <para>The <guilabel>Notes</guilabel> tab of this section allows
+        you to enter notes on the recipe and batches. These could be
+        specific brewing procedures, brewing and bottling dates, or
+        measured gravity. They are saved along with the recipe, but
+        otherwise do not affect it.</para>
+      </section>
+
+      <section id="characteristics">
+        <title>Recipe Characteristics</title>
+
+        <para>The middle section of the program window details your
+        recipe's characteristics. Information included here are the
+        recommended gravity, bitterness and color for the selected
+        recipe style, as well as the calculated gravity, bitterness,
+        color and alcoholic content for your recipe.</para>
+      </section>
+    </section>
+
+    <section id="misc">
+      <title>Miscellaneous</title>
+
+      <section id="alchohol">
+        <title>Alcohol Percentage Tool</title>
+
+        <para>You can calculate the actual alcohol percentage in a
+        batch by using the <guilabel>Alcohol Percentage</guilabel>
+        tool under the <guimenu>Tools</guimenu> menu. Enter in your
+        measured original gravity and final gravity. The percentage of
+        alchohol by volume and by weight will be calculated.</para>
+      </section>
+
+      <section id="hydrometer">
+        <title>Hydrometer Correction Tool</title>
+
+        <para>You can access the <guilabel>Hydrometer
+        Correction</guilabel> tool under the <guimenu>Tools</guimenu>
+        menu. This tool is useful for converting your actual
+        hydrometer readings to the correct value. Enter in the
+        temperature at which you took the sample, the temperature at
+        which the hydrometer is calibrated (typically 60&deg; or
+        68&deg; Fahrenheit), and the actual hydrometer reading. The
+        corrected reading will be calculated.</para>
+      </section>
+
+      <section id="qbrewdata">
+        <title>QBrew Data</title>
+
+        <para>The data that &qbrew; uses is in the file
+        <filename>qbrewdata</filename>, typically located under
+        the install directory in Windows, as part of the application
+        bundle under Macintosh OSX, and under
+        <filename>/usr/local/share/qbrew</filename> under traditional
+        Unix. If there exists a file in the user's home directory with
+        the name of <filename>.qbrewdata</filename>, then this file
+        will be used instead.</para>
+
+        <para>The Database Editor, under the <guimenu>Tools</guimenu>
+        menu, may be used to edit the users's <filename>.qbrewdata</filename>
+        file. The operation of the editor is similar to editing
+        ingredients in a recipe. In addition there is a
+        <guimenu>Style</guimenu> page for editing recipe styles.</para>
+      </section>
+
+      <section id="conversions">
+        <title>US/Metric Conversions</title>
+
+        <para>US units of measurement are used by default in
+        &qbrew;. This can be changed in the configuration dialog. Both
+        US and Metric measurements are available.</para>
+
+        <para>Please note that converting from one system to another
+        and back may result in round-off errors during the
+        conversion.</para>
+      </section>
+
+      <section id="exporting">
+        <title>Exporting and Importing Data</title>
+
+        <para>QBrew will import BeerXML recipes, and export native
+        recipes to HTML, PDF, BeerXML or plain text format. BeerXML is a
+        new format designed for sharing recipes and other brewing
+        data. QBrew supports version 1.0.</para>
+
+        <para>Importing or exporting a recipe will result in some loss
+        of data. This is because  brewing programs all have different
+        underlying assumptions and models for the data. Because of
+        this, QBrew recipes should be stored in the native QBrew
+        format, and only exported for sharing or posting
+        recipes.</para>
+
+      </section>
+    </section>
+  </chapter>
+
+  <chapter id="reference">
+    <title>&qbrew; Reference</title>
+
+    <section id="menus">
+      <title>The Menus</title>
+
+      <section id="file">
+        <title>The File Menu</title>
+
+        <variablelist>
+          <varlistentry>
+            <term><command>File->New <emphasis>(Ctrl+N)</emphasis></command></term>
+            <listitem>
+              <para>This creates a new empty recipe. If there is a
+              current recipe with unsaved changes the user is given a
+              chance to save it.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>File->Open <emphasis>(Ctrl+O)</emphasis></command></term>
+            <listitem>
+              <para>This opens an existing recipe. Use the Open dialog
+              to select the recipe you wish to open.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>File->Open Recent</command></term>
+            <listitem>
+              <para>This is a shortcut to open recently saved
+              recipes. This item opens a list with several of the most
+              recently saved recipes to choose from.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>File->Save <emphasis>(Ctrl+S)</emphasis></command></term>
+            <listitem>
+              <para>Saves the current recipe. If this is the first
+              time the recipe has been saved, the <guilabel>Save
+              As</guilabel> dialog (described next) will be shown.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>File->Save As...</command></term>
+            <listitem>
+              <para>Saves the recipe under a new file name. A <guilabel>Save
+              As</guilabel> dialog will be shown to select the name of
+              the file to save to.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>File->Export...</command></term>
+            <listitem>
+              <para>Exports the recipe to a different format. This
+              command will display the <guilabel>Export</guilabel>
+              dialog, which is very similar to the <guilabel>Save
+              As</guilabel> dialog.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>File->Print Preview...</command></term>
+            <listitem>
+              <para>Display a print preview dialog. This dialog can be used
+              to preview the recipe before printing.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>File->Print... <emphasis>(Ctrl+P)</emphasis></command></term>
+            <listitem>
+              <para>This prints the recipe. Opens a print dialog
+              allowing the user to specify where and how to print.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>File->Quit<emphasis>(Ctrl+Q)</emphasis></command></term>
+            <listitem>
+              <para>Quits &qbrew;. If you have unsaved recipes, you
+              will be prompted to save them.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </section>
+
+      <section id="tools">
+        <title>The Tools Menu</title>
+
+        <variablelist>
+          <varlistentry>
+            <term><command>Tools->Alcohol Percentage...</command></term>
+            <listitem>
+              <para>Brings up the Alchohol Percentage tool. This is
+              used to calculate alcohol percentage by weight or
+              volume, from measured specific gravity readins.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>Tools->Hydrometer Correction...</command></term>
+            <listitem>
+              <para>Brings up the Hydrometer Correction tool. This is
+              used to correct hydrometer readings taken at
+              temperatures other than the calibrated temperature.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>Tools->Database Editor...</command></term>
+            <listitem>
+              <para>Brings up the Database Editor tool. This is used
+              to edit the database of ingredients and styles.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </section>
+
+      <section id="options">
+        <title>The Options Menu</title>
+
+        <variablelist>
+          <varlistentry>
+            <term><command>Options->Main Toolbar</command></term>
+            <listitem>
+              <para>Toggle the main toolbar on and off. When unchecked the
+              toolbar is hidden.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>Options->Statusbar</command></term>
+            <listitem>
+              <para>Toggle the status bar on and off. When unchecked
+              the status bar is hidden.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>Options->Configure...</command></term>
+            <listitem>
+              <para>This configures settings for &qbrew;. A dialog is
+              shown to configure general, recipe and calculation
+              related settings.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </section>
+
+      <section id="help">
+        <title>The Help Menu</title>
+
+        <variablelist>
+          <varlistentry>
+            <term><command>Help->Contents <emphasis>(F1)</emphasis></command></term>
+            <listitem>
+              <para>Opens up a help window and displays this document.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>Help->Primer</command></term>
+            <listitem>
+              <para>Opens up a help window and displays a brewing primer.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>Help->What's This? <emphasis>(Shift-F1)</emphasis></command></term>
+            <listitem>
+              <para>Brings up a cursor you can use to find out what
+              various controls and objects in the application
+              do. Clicking on an item within &qbrew; will pop up a small
+              window with help on that item.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><command>Help->About...</command></term>
+            <listitem>
+              <para>Displays copyright and other basic information
+              about &qbrew;</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </section>
+    </section>
+
+    <section id="configuration">
+      <title>Configuration</title>
+
+      <para>The <guilabel>Configuration</guilabel> dialog is used
+      configuring &qbrew;. There are four buttons on the bottom of the
+      dialog. Pressing the <guilabel>OK</guilabel> button will apply
+      all settings and close the dialog. Pressing the
+      <guilabel>Reset</guilabel> button will reset the dialog to
+      default values. Pressing the <guilabel>Apply</guilabel> button
+      will apply the settings, but not close the dialog. The
+      <guilabel>Cancel</guilabel> button will close the dialog without
+      applying the settings.</para>
+
+      <para>Configuration changes are automatically saved when the
+      <guilabel>OK</guilabel> button is pressed.</para>
+
+      <section id="generalconfig">
+        <title>General Configuration</title>
+
+        <para>The <guilabel>"Look and feel"</guilabel> control allows
+        you to change the look and feel (theme) of
+        &qbrew;. <guilabel>"Show splash screen"</guilabel> lets you
+        choose to display or not display the program startup splash
+        screen.</para>
+
+        <para>The <guilabel>"Recent files"</guilabel> control selects
+        the number of files displayed in the <guilabel>"Open
+        Recent"</guilabel> menu. The <guilabel>"Enable
+        autosave"</guilabel> controls set whether automatic saving of
+        the current recipe is done, and how often. The
+        <guilabel>"Enable autobackup"</guilabel> control sets whether
+        recipes are automatically backed up. The <guilabel>"Load last
+        file"</guilabel> control determines whether the previously used
+        recipe is automatically loaded upon program startup.</para>
+      </section>
+
+      <section id="recipeconfig">
+        <title>Recipe Configuration</title>
+
+        <para>The <guilabel>"Recipe Defaults"</guilabel> section sets
+        some default recipe values. These settings only affect new
+        recipes or ingredients. They include <guilabel>"Batch
+        size"</guilabel>, <guilabel>"Recipe style"</guilabel>, and
+        <guilabel>"Hop type"</guilabel>.</para>
+      </section>
+
+      <section id="calculationconfig">
+        <title>Calculation Configuration</title>
+
+        <para>Use the <guilabel>"Measurement units"</guilabel> control
+        to set the measurement units you will be using (US or
+        Metric). Use the <guilabel>"Tinseth"</guilabel> and
+        <guilabel>"Morey"</guilabel> controls to alter the bitterness
+        and color calculations. <guilabel>"Efficiency"</guilabel> sets
+        the mash efficiency for calculations.</para>
+      </section>
+    </section>
+  </chapter>
+
+  <chapter id="notes">
+    <title>Designer's Notes</title>
+
+      <para>&qbrew; aims to be a simple streamlined homebrewing recipe
+      calculator. As such, it doesn't include features that other
+      software designed for professional brewing might include. This
+      is not a flaw on the part of &qbrew;, but a conscious choice to
+      moderate the scope of the software. Emails and forum posts
+      praising the &qbrew; interface tell me that his was a good
+      decision.</para>
+
+    <section id="grain">
+      <title>Grain Calculations</title>
+
+      <para>The basic gravity calculation is the sum of all grains'
+      extract times quantity, divided by the batch size. Mashed grains
+      will have their extract modified by the mash efficiency. Steeped
+      grains will use a lesser efficiency, typically half of their
+      extract.</para>
+
+      <para>The color calculated is in <abbrev>SRM</abbrev>, not in
+      <abbrev>HCU</abbrev> (homebrew color
+      units). <abbrev>HCU</abbrev> is the sum of all grains' color
+      times quantity, divided by the batch size. This is only accurate
+      for very low color values. The default conversion to SRM uses
+      the formula discovered by Ray Daniels, which is
+      <emphasis>SRM=(MCUx0.2)+8.4</emphasis> (for values of HCU over
+      8.0). An alternate color calculation discovered by Dan Morey is
+      <emphasis>SRM=1.4922x[(MCU)^0.6859]</emphasis> (for values of
+      SRM less than 50). To change to the Morey method, open up the
+      <command>Configure...</command> dialog and check the
+      <command>Use Morey color calculation</command> box. More
+      information on color calculations can be found at "Approximating
+      SRM Beer Color" &lt;http://hbd.org/babble/Color.htm&gt;, and
+      "Beer's Law"
+      &lt;http://www.brewingtechniques.com/brewingtechniques/beerslaw/morey.html&gt;.</para>
+
+      <para>Final gravity is assumed to be 25% of the
+      <abbrev>OG</abbrev>. Looking through the <abbrev>AHB</abbrev>
+      style guide, this is the same assumption they made. The
+      alcoholic content calculations were derived from Noonan's
+      <citetitle>New Brewing Lager Beer</citetitle>, and based
+      on this <abbrev>FG</abbrev> assumption.</para>
+    </section>
+
+    <section id="hop">
+      <title>Hop Calculations</title>
+
+      <para>There are two different methods used to calculate hop
+      bitterness. The default <abbrev>IBU</abbrev> calculation uses
+      the Rager method, from Norm Pyle's "Hops FAQ"
+      &lt;http://realbeer.com/hops/FAQ.html&gt;. The other method is
+      the Tinseth method, from Glen Tinseth's "Hop Page"
+      &lt;http://realbeer.com/hops/&gt;. To change to the Tinseth
+      method, open up the <command>Configure...</command> dialog
+      and check the
+      <command>Use Tinseth bitterness calculation</command> box. The
+      utilization table for the Rager method can be edited by changing
+      the appropriate area of the <filename>qbrewdata</filename>
+      file.</para>
+
+      <para>Please see the above links for details on these formulae,
+      as they can be a bit complex.</para>
+    </section>
+  </chapter>
+
+  <chapter id="faq">
+    <title>Questions and Answers</title>
+
+    <qandaset defaultlabel="qanda">
+      <qandaentry>
+        <question>
+          <para>Why don't the results on the <guilabel>Alcohol
+          tool</guilabel> match the
+          <guilabel>Characteristics</guilabel> section of the main
+          window?</para>
+        </question>
+        <answer>
+          <para>It's the curse of rounding errors! When you use the
+          <guilabel>Alcohol tool</guilabel> you are entering in
+          gravity values with a precision of two decimal places. But
+          your recipe in QBrew is stored with a much higher precision
+          than this, even though it is displaying characteristics with
+          a lower precision.</para>
+        </answer>
+      </qandaentry>
+      <qandaentry>
+        <question>
+          <para>I get hundreds of errors when I try to compile
+          &qbrew; under Unix. What am I doing wrong?</para>
+        </question>
+        <answer>
+          <para>&qbrew; has been successfully compiled and run on a
+          variety of Unix platforms, so the odds are low that
+          something's wrong with configure (although it does
+          happen). More likely, you don't have the necessary libraries
+          or headers installed. Make sure that you have the X
+          development libraries installed, as well as the Qt
+          &qt.version; or greater development libraries. &qbrew; will
+          not compile and link with the older Qt 3.x
+          libraries.</para>
+
+          <para>There are many useful options in the configure
+          script. These options can be displayed by running
+          <command>./configure --help</command>. Also please read the
+          INSTALL file for several useful tips.</para>
+
+          <para>If you are still having problems after this, then
+          write me at <email>qbrew@usermode.org</email>. Please
+          include the full text of the error message, along with the
+          <filename>config.log</filename> in the build directory.</para> 
+        </answer>
+      </qandaentry>
+      <qandaentry>
+        <question>
+          <para>Why don't you distribute &qbrew; as a DEB or RPM file?</para>
+        </question>
+        <answer>
+          <para>I do make packages available for Windows and Mac
+          OSX. I am doing this because users of those platforms are
+          unaccustomed to building software. It is more difficult to
+          do this under Linux and Unix because there are so too many
+          different varieties available. I cannot possibly distribute
+          binary packages for each system and distribution while trying
+          to keep up with changing versions.</para>
+
+          <para>At this time, &qbrew; is already available prepackaged
+          for Debian GNU/Linux, SuSE Linux, Linspire, NetBSD and
+          FreeBSD. If you distribution does not have a &qbrew;
+          package, you may wish to consider maintaining one for
+          them. Please note that the available binary packages are not
+          always the most recent &qbrew; version.</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+  </chapter>
+
+  <appendix id="credits">
+    <title>Credits</title>
+
+    <section id="thanks">
+      <title>Helpful Folk</title>
+
+      <para>I would like the thank the following people for their
+      outstanding help with the creation of &qbrew;...</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>...Abe Kabakoff for contributing several formulae and
+          the Correction tool.</para>
+        </listitem>
+        <listitem>
+          <para>...Michal Palczewski for contributing bug fixes and
+          the Alcohol tool.</para>
+        </listitem>
+        <listitem>
+          <para>...Lee Henderson,  Rob Hudson, and Kevin Pullin for
+          contributing bug fixes.</para>
+        </listitem>
+        <listitem>
+          <para>...Tobias Quathamer for German translation work.</para>
+        </listitem>
+        <listitem>
+          <para>...Stephen Lowrie for a lot of rote work with
+          the <filename>qbrewdata</filename> file, as well as major
+          portions of the brewing primer.</para>
+        </listitem>
+        <listitem>
+          <para>...the various maintainers for &qbrew; packages.</para>
+        </listitem>
+        <listitem>
+          <para>...The numerous users who have written me and kept my
+          spirits up.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section id="copyright">
+      <title>Copyright</title>
+
+      <para>Copyright &copy; 1999 - 2008 David Johnson, All Rights
+      Reserved.</para>
+
+      <para>Redistribution and use in source and binary forms, with or
+      without modification, are permitted provided that the following
+      conditions are met:</para>
+
+      <para>1. Redistributions of source code must retain the above
+      copyright notice, this list of conditions and the following
+      disclaimer.</para>
+
+      <para>2. Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials provided
+      with the distribution.</para>
+
+      <para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+      CONTRIBUTORS ``AS IS''  AND ANY EXPRESS OR IMPLIED WARRANTIES,
+      INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+      MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+      DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR
+      CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+      SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+      LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
+      USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+      AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+      LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+      IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+      THE POSSIBILITY OF SUCH DAMAGE.</para>
+
+      <para>This product contains software written by Abe Kabakoff
+      &lt;abe_kabakoff@gmx.de&gt;, and Michal Palczewski
+      &lt;michalp@gmail.com&gt;</para>
+    </section>
+  </appendix>
+</book>

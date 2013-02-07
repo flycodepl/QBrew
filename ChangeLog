@@ -1,0 +1,105 @@
+05/16/2008      - Use streaming XML instead of DOM
+05/04/2008      - Print preview, print improvements
+10/05/2007      - Import bug fixes
+
+Version 0.4.0
+-------------
+
+09/22/2007      - Added ingredient types
+08/05/2007      - BeerXML import
+07/25/2007      - I18N improvements
+07/20/2007      - Printing improvements
+05/30/2007      - Qt 4.3.0, various improvements
+07/05/2006	- Calculation corrections
+03/12/2006	- Ported to Qt 4
+12/03/2005	- Fix column sorting (Lee Henderson)
+
+Version 0.3.5
+-------------
+
+05/17/2005	- Updated style database to BJCP 2004
+05/05/2005	- Added splashscreen
+04/17/2005	- Added database editor tool
+04/10/2005	- Minor refactoring
+03/25/2005	- Export to HTML, improved printing
+
+Version 0.3.4
+-------------
+
+09/04/2004	- Fixed ingredient sorting
+08/29/2004	- Fixed fixed format spinboxes
+08/25/2004	- Added autosave, autobackup
+08/22/2004	- Improved configuration dialog
+06/26/2004	- Improved gravity calculations (Michal Palczewski)
+06/07/2004	- Embedded images
+05/27/2004	- Added ABV tool (Michal Palczewski)
+02/01/2004	- Dropped support for pre qt-3.2 versions
+
+Version 0.3.3
+-------------
+07/08/2003	- Added in Morey color calculation as an option
+03/05/2003	- Miscellaneous bug fixes
+
+Version 0.3.2
+-------------
+03/01/2003      - added notes page for recipe and batch notes
+03/01/2003      - converted document processing over to xslt
+02/28/2003	- ingredient comboboxes remember their state
+02/27/2003	- configure detects qt-3.1
+11/17/2002	- improved toolbar and icons
+
+Version 0.3.1
+-------------
+04/19/2002	- autoconf rework
+04/12/2002	- win32 compatibility
+04/09/2002	- Qt-3x compatibility
+
+Version 0.3.0 - Porter release
+-------------
+12/31/2001-	- Metric/US conversions
+10/13/2001      - Fixed installation directories
+10/11/2001      - Rearchitecture
+
+Version 0.2.0 - Bitter release
+-------------
+02/21/2001	- Added Abe Kabakoff's hydrometer correction dialog
+02/12/2001	- Changed over file formats to XML/DOM, kept some
+		  conversion routines
+
+Version 0.1.6
+-------------
+02/09/2001	- Calculation and format fixes. Added sqa test procedure
+
+Version 0.1.5
+-------------
+12/08/2000	- Code cleanup, reformat, and minor redesign.
+
+Version 0.1.4
+-------------
+09/22/2000	- Added in Tinseth formula as an option
+09/21/2000	- Bug fixes and build/configuration changes
+
+Version 0.1.3
+-------------
+06/17/2000	- Bug fix for Qt-2.0.2 compatibility
+
+Version 0.1.2
+-------------
+06/14/2000	- Added brewing primer
+05/04/2000	- Started some code cleanup
+04/25/2000	- Added Step widget style
+
+Version 0.1.1
+-------------
+12/07/1999	- Minor bug fixes. Added units suffixes to spinboxes
+
+Version 0.1.0   - Amber release
+-------------
+11/20/1999	- declared nominally "feature complete"
+11/08/1999	- calculations in progress
+10/26/1999	- user interface finished
+10/10/1999	- working on listview for ingredients
+10/03/1999	- brewing data files coming along
+09/25/1999	- basic infrastructure in place
+
+September 20th, 1999 - Project Start

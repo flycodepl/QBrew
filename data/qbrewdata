@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<!DOCTYPE qbrewdata ><qbrewdata version="0.4.1" >
+ <styles>
+   <style oglow="1.045" oghigh="1.060" fglow="1.010" fghigh="1.015" ibulow="25" ibuhigh="40"  srmlow="10" srmhigh="17" >American Amber Ale</style>
+   <style oglow="1.080" oghigh="1.120" fglow="1.016" fghigh="1.030" ibulow="50" ibuhigh="120" srmlow="10" srmhigh="19" >American Barleywine</style>
+   <style oglow="1.045" oghigh="1.060" fglow="1.010" fghigh="1.016" ibulow="20" ibuhigh="40"  srmlow="18" srmhigh="35" >American Brown Ale</style>
+   <style oglow="1.056" oghigh="1.075" fglow="1.010" fghigh="1.018" ibulow="40" ibuhigh="60"  srmlow="6"  srmhigh="15" >American IPA</style>
+   <style oglow="1.045" oghigh="1.060" fglow="1.010" fghigh="1.015" ibulow="30" ibuhigh="45"  srmlow="5"  srmhigh="14" >American Pale Ale</style>
+   <style oglow="1.050" oghigh="1.075" fglow="1.010" fghigh="1.022" ibulow="35" ibuhigh="75"  srmlow="30" srmhigh="40" >American Stout</style>
+   <style oglow="1.040" oghigh="1.055" fglow="1.008" fghigh="1.013" ibulow="15" ibuhigh="30"  srmlow="3"  srmhigh="6"  >American Wheat or Rye Beer</style>
+   <style oglow="1.060" oghigh="1.090" fglow="1.016" fghigh="1.024" ibulow="20" ibuhigh="40"  srmlow="17" srmhigh="30" >Baltic Porter</style>
+   <style oglow="1.062" oghigh="1.075" fglow="1.008" fghigh="1.016" ibulow="20" ibuhigh="30"  srmlow="4"  srmhigh="6"  >Belgian Blond Ale</style>
+   <style oglow="1.075" oghigh="1.110" fglow="1.010" fghigh="1.024" ibulow="15" ibuhigh="25"  srmlow="14" srmhigh="20" >Belgian Dark Strong Ale</style>
+   <style oglow="1.062" oghigh="1.075" fglow="1.010" fghigh="1.018" ibulow="15" ibuhigh="25"  srmlow="10" srmhigh="14" >Belgian Dubbel</style>
+   <style oglow="1.070" oghigh="1.095" fglow="1.010" fghigh="1.016" ibulow="25" ibuhigh="35"  srmlow="4"  srmhigh="6"  >Belgian Golden Strong Ale</style>
+   <style oglow="1.048" oghigh="1.054" fglow="1.010" fghigh="1.014" ibulow="20" ibuhigh="30"  srmlow="8"  srmhigh="14" >Belgian Pale Ale</style>
+   <style oglow="1.040" oghigh="1.075" fglow="1.000" fghigh="1.016" ibulow="2"  ibuhigh="40"  srmlow="3"  srmhigh="20" >Belgian Specialty Ale</style>
+   <style oglow="1.075" oghigh="1.085" fglow="1.010" fghigh="1.016" ibulow="25" ibuhigh="38"  srmlow="4"  srmhigh="6"  >Belgian Tripel</style>
+   <style oglow="1.028" oghigh="1.032" fglow="1.004" fghigh="1.006" ibulow="3"  ibuhigh="8"   srmlow="2"  srmhigh="3"  >Berliner Weisse</style>
+   <style oglow="1.060" oghigh="1.080" fglow="1.012" fghigh="1.018" ibulow="20" ibuhigh="30"  srmlow="6"  srmhigh="19" >Biere de Garde</style>
+   <style oglow="1.038" oghigh="1.054" fglow="1.008" fghigh="1.013" ibulow="15" ibuhigh="28"  srmlow="3"  srmhigh="6"  >Blonde Ale</style>
+   <style oglow="1.044" oghigh="1.056" fglow="1.013" fghigh="1.017" ibulow="35" ibuhigh="45"  srmlow="3"  srmhigh="6"  >Bohemian Pilsener</style>
+   <style oglow="1.060" oghigh="1.120" fglow="1.015" fghigh="1.030" ibulow="0"  ibuhigh="50"  srmlow="3"  srmhigh="16" >Braggot</style>
+   <style oglow="1.040" oghigh="1.052" fglow="1.008" fghigh="1.014" ibulow="18" ibuhigh="35"  srmlow="20" srmhigh="30" >Brown Porter</style>
+   <style oglow="1.048" oghigh="1.054" fglow="1.011" fghigh="1.014" ibulow="30" ibuhigh="45"  srmlow="10" srmhigh="14" >California Common Beer</style>
+   <style oglow="1.044" oghigh="1.060" fglow="1.010" fghigh="1.015" ibulow="25" ibuhigh="40"  srmlow="3"  srmhigh="6"  >Classic American Pilsner</style>
+   <style oglow="1.050" oghigh="1.056" fglow="1.012" fghigh="1.016" ibulow="20" ibuhigh="30"  srmlow="14" srmhigh="22" >Classic Rauchbier</style>
+   <style oglow="1.042" oghigh="1.055" fglow="1.006" fghigh="1.012" ibulow="15" ibuhigh="20"  srmlow="2"  srmhigh="5"  >Cream Ale</style>
+   <style oglow="1.044" oghigh="1.056" fglow="1.008" fghigh="1.012" ibulow="8"  ibuhigh="20"  srmlow="14" srmhigh="22" >Dark American Lager</style>
+   <style oglow="1.072" oghigh="1.096" fglow="1.016" fghigh="1.024" ibulow="16" ibuhigh="26"  srmlow="6"  srmhigh="25" >Doppelbock</style>
+   <style oglow="1.048" oghigh="1.056" fglow="1.010" fghigh="1.015" ibulow="23" ibuhigh="30"  srmlow="4"  srmhigh="6"  >Dortmunder Export</style>
+   <style oglow="1.036" oghigh="1.050" fglow="1.007" fghigh="1.011" ibulow="30" ibuhigh="45"  srmlow="25" srmhigh="40" >Dry Stout</style>
+   <style oglow="1.044" oghigh="1.056" fglow="1.010" fghigh="1.014" ibulow="10" ibuhigh="18"  srmlow="14" srmhigh="23" >Dunkelweizen</style>
+   <style oglow="1.046" oghigh="1.054" fglow="1.010" fghigh="1.015" ibulow="35" ibuhigh="50"  srmlow="13" srmhigh="17" >Dusseldorf Altbier</style>
+   <style oglow="1.078" oghigh="1.120" fglow="1.020" fghigh="1.035" ibulow="25" ibuhigh="35"  srmlow="18" srmhigh="30" >Eisbock</style>
+   <style oglow="1.080" oghigh="1.120" fglow="1.018" fghigh="1.030" ibulow="35" ibuhigh="70"  srmlow="8"  srmhigh="22" >English Barleywine</style>
+   <style oglow="1.050" oghigh="1.075" fglow="1.010" fghigh="1.018" ibulow="40" ibuhigh="60"  srmlow="8"  srmhigh="14" >English IPA</style>
+   <style oglow="1.048" oghigh="1.060" fglow="1.010" fghigh="1.016" ibulow="30" ibuhigh="50"  srmlow="6"  srmhigh="18" >Extra Special/Strong Bitter (English Pale Ale)</style>
+   <style oglow="1.043" oghigh="1.077" fglow="1.012" fghigh="1.016" ibulow="15" ibuhigh="25"  srmlow="15" srmhigh="20" >Flanders Brown Ale/Oud Bruin</style>
+   <style oglow="1.046" oghigh="1.054" fglow="1.008" fghigh="1.016" ibulow="15" ibuhigh="25"  srmlow="10" srmhigh="16" >Flanders Red Ale</style>
+   <style oglow="1.056" oghigh="1.075" fglow="1.010" fghigh="1.018" ibulow="30" ibuhigh="70"  srmlow="30" srmhigh="40" >Foreign Extra Stout</style>
+   <style oglow="1.030" oghigh="1.080" fglow="1.008" fghigh="1.020" ibulow="10" ibuhigh="40"  srmlow="2"  srmhigh="35" >Fruit Beer</style>
+   <style oglow="1.040" oghigh="1.060" fglow="1.000" fghigh="1.010" ibulow="2"  ibuhigh="10"  srmlow="3"  srmhigh="7"  >Fruit Lambic</style>
+   <style oglow="1.020" oghigh="1.120" fglow="1.005" fghigh="1.030" ibulow="1"  ibuhigh="70"  srmlow="1"  srmhigh="40" >Generic Ale</style>
+   <style oglow="1.044" oghigh="1.050" fglow="1.008" fghigh="1.013" ibulow="25" ibuhigh="45"  srmlow="2"  srmhigh="5"  >German Pilsner (Pils)</style>
+   <style oglow="1.040" oghigh="1.060" fglow="1.000" fghigh="1.006" ibulow="2"  ibuhigh="10"  srmlow="3"  srmhigh="7"  >Gueuze</style>
+   <style oglow="1.075" oghigh="1.090" fglow="1.012" fghigh="1.020" ibulow="60" ibuhigh="100" srmlow="8"  srmhigh="15" >Imperial IPA</style>
+   <style oglow="1.075" oghigh="1.095" fglow="1.018" fghigh="1.030" ibulow="50" ibuhigh="90"  srmlow="30" srmhigh="40" >Imperial Stout</style>
+   <style oglow="1.044" oghigh="1.060" fglow="1.010" fghigh="1.014" ibulow="17" ibuhigh="28"  srmlow="9"  srmhigh="18" >Irish Red Ale</style>
+   <style oglow="1.042" oghigh="1.056" fglow="1.010" fghigh="1.023" ibulow="25" ibuhigh="38"  srmlow="30" srmhigh="40" >Irish Stout</style>
+   <style oglow="1.044" oghigh="1.050" fglow="1.007" fghigh="1.011" ibulow="20" ibuhigh="30"  srmlow="3"  srmhigh="5"  >Kolsch</style>
+   <style oglow="1.030" oghigh="1.040" fglow="0.998" fghigh="1.008" ibulow="8"  ibuhigh="12"  srmlow="2"  srmhigh="3"  >Lite American Lager</style>
+   <style oglow="1.064" oghigh="1.072" fglow="1.011" fghigh="1.018" ibulow="23" ibuhigh="35"  srmlow="6"  srmhigh="11" >Maibock/Helles Bock</style>
+   <style oglow="1.030" oghigh="1.038" fglow="1.008" fghigh="1.013" ibulow="10" ibuhigh="25"  srmlow="12" srmhigh="25" >Mild</style>
+   <style oglow="1.042" oghigh="1.056" fglow="1.010" fghigh="1.023" ibulow="25" ibuhigh="40"  srmlow="30" srmhigh="40" >Milk Stout</style>
+   <style oglow="1.048" oghigh="1.056" fglow="1.010" fghigh="1.016" ibulow="18" ibuhigh="28"  srmlow="14" srmhigh="28" >Munich Dunkel</style>
+   <style oglow="1.045" oghigh="1.051" fglow="1.008" fghigh="1.012" ibulow="16" ibuhigh="22"  srmlow="3"  srmhigh="5"  >Munich Helles</style>
+   <style oglow="1.046" oghigh="1.054" fglow="1.010" fghigh="1.015" ibulow="25" ibuhigh="40"  srmlow="13" srmhigh="19" >North German Altbier</style>
+   <style oglow="1.040" oghigh="1.052" fglow="1.008" fghigh="1.013" ibulow="20" ibuhigh="30"  srmlow="12" srmhigh="22" >Northern English Brown Ale</style>
+   <style oglow="1.048" oghigh="1.065" fglow="1.010" fghigh="1.018" ibulow="25" ibuhigh="40"  srmlow="22" srmhigh="40" >Oatmeal Stout</style>
+   <style oglow="1.050" oghigh="1.056" fglow="1.012" fghigh="1.016" ibulow="20" ibuhigh="28"  srmlow="7"  srmhigh="14" >Oktoberfest/Marzen</style>
+   <style oglow="1.060" oghigh="1.090" fglow="1.015" fghigh="1.022" ibulow="30" ibuhigh="60"  srmlow="10" srmhigh="22" >Old Ale</style>
+   <style oglow="1.046" oghigh="1.056" fglow="1.008" fghigh="1.012" ibulow="15" ibuhigh="25"  srmlow="2"  srmhigh="6"  >Premium American Lager</style>
+   <style oglow="1.048" oghigh="1.065" fglow="1.012" fghigh="1.016" ibulow="25" ibuhigh="50"  srmlow="22" srmhigh="35" >Robust Porter</style>
+   <style oglow="1.046" oghigh="1.056" fglow="1.010" fghigh="1.014" ibulow="10" ibuhigh="20"  srmlow="14" srmhigh="19" >Roggenbier (German Rye Beer)</style>
+   <style oglow="1.048" oghigh="1.080" fglow="1.010" fghigh="1.016" ibulow="25" ibuhigh="45"  srmlow="5"  srmhigh="12" >Saison</style>
+   <style oglow="1.046" oghigh="1.052" fglow="1.010" fghigh="1.016" ibulow="22" ibuhigh="32"  srmlow="17" srmhigh="30" >Schwarzbier</style>
+   <style oglow="1.040" oghigh="1.054" fglow="1.010" fghigh="1.016" ibulow="15" ibuhigh="30"  srmlow="9"  srmhigh="17" >Scottish Export 80/-</style>
+   <style oglow="1.035" oghigh="1.040" fglow="1.010" fghigh="1.015" ibulow="10" ibuhigh="25"  srmlow="9"  srmhigh="17" >Scottish Heavy 70/-</style>
+   <style oglow="1.030" oghigh="1.035" fglow="1.010" fghigh="1.013" ibulow="10" ibuhigh="20"  srmlow="9"  srmhigh="17" >Scottish Light 60/-</style>
+   <style oglow="1.035" oghigh="1.042" fglow="1.011" fghigh="1.014" ibulow="12" ibuhigh="20"  srmlow="19" srmhigh="35" >Southern English Brown Ale</style>
+   <style oglow="1.040" oghigh="1.048" fglow="1.008" fghigh="1.012" ibulow="25" ibuhigh="40"  srmlow="5"  srmhigh="16" >Special/Best/Premium Bitter</style>
+   <style oglow="1.030" oghigh="1.080" fglow="1.008" fghigh="1.020" ibulow="10" ibuhigh="40"  srmlow="2"  srmhigh="35" >Spice, Herb or Vegetable Beer</style>
+   <style oglow="1.040" oghigh="1.050" fglow="1.004" fghigh="1.010" ibulow="8"  ibuhigh="15"  srmlow="2"  srmhigh="4"  >Standard American Lager</style>
+   <style oglow="1.032" oghigh="1.040" fglow="1.007" fghigh="1.011" ibulow="25" ibuhigh="35"  srmlow="4"  srmhigh="14" >Standard/Ordinary Bitter</style>
+   <style oglow="1.040" oghigh="1.054" fglow="1.000" fghigh="1.010" ibulow="2"  ibuhigh="10"  srmlow="3"  srmhigh="7"  >Straight (Unblended) Lambic</style>
+   <style oglow="1.070" oghigh="1.130" fglow="1.018" fghigh="1.030" ibulow="17" ibuhigh="35"  srmlow="14" srmhigh="25" >Strong Scotch Ale</style>
+   <style oglow="1.042" oghigh="1.056" fglow="1.010" fghigh="1.023" ibulow="25" ibuhigh="40"  srmlow="30" srmhigh="40" >Sweet Stout</style>
+   <style oglow="1.064" oghigh="1.072" fglow="1.013" fghigh="1.019" ibulow="20" ibuhigh="27"  srmlow="14" srmhigh="22" >Traditional Bock</style>
+   <style oglow="1.046" oghigh="1.052" fglow="1.010" fghigh="1.014" ibulow="18" ibuhigh="30"  srmlow="10" srmhigh="16" >Vienna Lager</style>
+   <style oglow="1.044" oghigh="1.052" fglow="1.010" fghigh="1.014" ibulow="8"  ibuhigh="15"  srmlow="2"  srmhigh="8"  >Weizen/Weissbier</style>
+   <style oglow="1.064" oghigh="1.080" fglow="1.015" fghigh="1.022" ibulow="15" ibuhigh="30"  srmlow="12" srmhigh="25" >Weizenbock</style>
+   <style oglow="1.044" oghigh="1.052" fglow="1.008" fghigh="1.012" ibulow="10" ibuhigh="20"  srmlow="2"  srmhigh="4"  >Witbier</style>
+ </styles>
+ <grains>
+  <grain extract="1.025" color="1.0"  type="Grain"   use="Other"  >Generic malt</grain>
+  <grain extract="1.037" color="1.8"  type="Grain"   use="Mashed" >American two-row</grain>
+  <grain extract="1.035" color="1.8"  type="Grain"   use="Mashed" >American six-row</grain>
+  <grain extract="1.037" color="3.0"  type="Grain"   use="Mashed" >Belgian two-row</grain>
+  <grain extract="1.038" color="2.5"  type="Grain"   use="Mashed" >British two-row</grain>
+  <grain extract="1.036" color="2.1"  type="Grain"   use="Mashed" >Canadian two-row</grain>
+  <grain extract="1.038" color="1.6"  type="Grain"   use="Mashed" >German pilsener</grain>
+  <grain extract="1.037" color="1.8"  type="Grain"   use="Mashed" >Belgian pilsener</grain>
+  <grain extract="1.035" color="1.7"  type="Grain"   use="Mashed" >Lager malt</grain>
+  <grain extract="1.038" color="2.0"  type="Grain"   use="Mashed" >American wheat</grain>
+  <grain extract="1.038" color="1.8"  type="Grain"   use="Mashed" >Belgian wheat</grain>
+  <grain extract="1.039" color="1.8"  type="Grain"   use="Mashed" >German wheat</grain>
+  <grain extract="1.039" color="8.0"  type="Grain"   use="Mashed" >German dark wheat</grain>
+  <grain extract="1.030" color="3.5"  type="Grain"   use="Mashed" >Rye malt</grain>
+  <grain extract="1.035" color="4.0"  type="Grain"   use="Mashed" >American vienna</grain>
+  <grain extract="1.037" color="3.0"  type="Grain"   use="Mashed" >German vienna</grain>
+  <grain extract="1.037" color="4.0"  type="Grain"   use="Mashed" >British mild</grain>
+  <grain extract="1.038" color="5.0"  type="Grain"   use="Mashed" >Peated malt</grain>
+  <grain extract="1.032" color="70"   type="Grain"   use="Mashed" >British brown</grain>
+  <grain extract="1.035" color="24"   type="Grain"   use="Mashed" >Belgian biscuit</grain>
+  <grain extract="1.030" color="18"   type="Grain"   use="Mashed" >Canadian honey malt</grain>
+  <grain extract="1.033" color="20"   type="Grain"   use="Mashed" >American Munich</grain>
+  <grain extract="1.037" color="8.0"  type="Grain"   use="Mashed" >German Munich</grain>
+  <grain extract="1.033" color="1.8"  type="Grain"   use="Mashed" >CaraPils</grain>
+  <grain extract="1.034" color="22"   type="Grain"   use="Mashed" >CaraVienne</grain>
+  <grain extract="1.033" color="75"   type="Grain"   use="Mashed" >CaraMunich</grain>
+  <grain extract="1.030" color="220"  type="Grain"   use="Mashed" >Belgian Special &quot;B&quot;</grain>
+  <grain extract="1.035" color="10"   type="Grain"   use="Mashed" >Crystal 10L</grain>
+  <grain extract="1.035" color="20"   type="Grain"   use="Mashed" >Crystal 20L</grain>
+  <grain extract="1.035" color="30"   type="Grain"   use="Mashed" >Crystal 30L</grain>
+  <grain extract="1.034" color="40"   type="Grain"   use="Mashed" >Crystal 40L</grain>
+  <grain extract="1.034" color="60"   type="Grain"   use="Mashed" >Crystal 60L</grain>
+  <grain extract="1.034" color="80"   type="Grain"   use="Mashed" >Crystal 80L</grain>
+  <grain extract="1.033" color="90"   type="Grain"   use="Mashed" >Crystal 90L</grain>
+  <grain extract="1.033" color="120"  type="Grain"   use="Mashed" >Crystal 120L</grain>
+  <grain extract="1.035" color="34"   type="Grain"   use="Mashed" >British carastan</grain>
+  <grain extract="1.034" color="55"   type="Grain"   use="Mashed" >British crystal 50-60L</grain>
+  <grain extract="1.034" color="75"   type="Grain"   use="Mashed" >British crystal 70-80L</grain>
+  <grain extract="1.033" color="105"  type="Grain"   use="Mashed" >British crystal 95-115L</grain>
+  <grain extract="1.033" color="150"  type="Grain"   use="Mashed" >British crystal 135-165L</grain>
+  <grain extract="1.029" color="350"  type="Grain"   use="Mashed" >American chocolate malt</grain>
+  <grain extract="1.034" color="475"  type="Grain"   use="Mashed" >British chocolate malt</grain>
+  <grain extract="1.030" color="400"  type="Grain"   use="Mashed" >German carafa</grain>
+  <grain extract="1.028" color="500"  type="Grain"   use="Mashed" >American black patent</grain>
+  <grain extract="1.027" color="525"  type="Grain"   use="Mashed" >British black patent</grain>
+  <grain extract="1.028" color="450"  type="Grain"   use="Mashed" >Roasted barley</grain>
+  <grain extract="1.030" color="650"  type="Grain"   use="Mashed" >German roasted wheat</grain>
+  <grain extract="1.030" color="525"  type="Grain"   use="Mashed" >German carafa chocolate malt</grain>
+  <grain extract="1.036" color="320"  type="Grain"   use="Mashed" >Carafa I malt</grain>
+  <grain extract="1.036" color="415"  type="Grain"   use="Mashed" >Carafa II malt</grain>
+  <grain extract="1.036" color="525"  type="Grain"   use="Mashed" >Carafa III malt</grain>
+  <grain extract="1.038" color="4.0"  type="Grain"   use="Mashed" >Maris Otter Malt</grain>
+  <grain extract="1.036" color="26"   type="Grain"   use="Mashed" >Belgian aromatic malt</grain>
+  <grain extract="1.038" color="3.0"  type="Grain"   use="Mashed" >Golden Promise Malt</grain>
+  <grain extract="1.037" color="4.0"  type="Grain"   use="Mashed" >Rauch malt</grain>
+  <grain extract="1.037" color="5.0"  type="Extract" use="Extract">Light malt extract</grain>
+  <grain extract="1.036" color="9.0"  type="Extract" use="Extract">Amber malt extract</grain>
+  <grain extract="1.036" color="15"   type="Extract" use="Extract">Dark malt extract</grain>
+  <grain extract="1.037" color="3.0"  type="Extract" use="Extract">Wheat malt extract</grain>
+  <grain extract="1.045" color="7.5"  type="Extract" use="Extract">Light D.M.E.</grain>
+  <grain extract="1.045" color="12.5" type="Extract" use="Extract">Amber D.M.E.</grain>
+  <grain extract="1.044" color="18"   type="Extract" use="Extract">Dark D.M.E.</grain>
+  <grain extract="1.040" color="0.5"  type="Adjunct" use="Mashed" >Flaked corn</grain>
+  <grain extract="1.033" color="2.2"  type="Adjunct" use="Mashed" >Flaked oats</grain>
+  <grain extract="1.040" color="0.5"  type="Adjunct" use="Mashed" >Flaked rice</grain>
+  <grain extract="1.036" color="2.8"  type="Adjunct" use="Mashed" >Flaked rye</grain>
+  <grain extract="1.034" color="2.0"  type="Adjunct" use="Mashed" >Flaked wheat</grain>
+  <grain extract="1.035" color="2.0"  type="Adjunct" use="Mashed" >Torrified wheat</grain>
+  <grain extract="1.046" color="1.0"  type="Sugar"   use="Other">Cane sugar</grain>
+  <grain extract="1.042" color="1.5"  type="Sugar"   use="Other">Honey</grain>
+  <grain extract="1.036" color="5"    type="Sugar"   use="Other">Belgian candi sugar, clear</grain>
+  <grain extract="1.036" color="75"   type="Sugar"   use="Other">Belgian candi sugar, amber</grain>
+  <grain extract="1.036" color="275"  type="Sugar"   use="Other">Belgian candi sugar, dark</grain>
+  <grain extract="1.046" color="8.0"  type="Sugar"   use="Other">Brown sugar, light</grain>
+  <grain extract="1.046" color="50"   type="Sugar"   use="Other">Brown sugar, dark</grain>
+ </grains>
+ <hops>
+  <hop alpha="10"  >Generic Hops</hop>
+  <hop alpha="5.7" >Ahtanum</hop>
+  <hop alpha="6.5" >Bramling Cross</hop>
+  <hop alpha="8.1" >Brewers Gold</hop>
+  <hop alpha="9.5" >Bullion</hop>
+  <hop alpha="6.6" >Cascade</hop>
+  <hop alpha="9.0" >Centennial</hop>
+  <hop alpha="7.3" >Challenger</hop>
+  <hop alpha="11.5">Chinook</hop>
+  <hop alpha="7.7" >Cluster</hop>
+  <hop alpha="15.4">Columbus</hop>
+  <hop alpha="4.0" >Crystal</hop>
+  <hop alpha="2.4" >Eroica</hop>
+  <hop alpha="4.0" >Fuggles</hop>
+  <hop alpha="6.5" >First Gold</hop>
+  <hop alpha="11"  >Galena</hop>
+  <hop alpha="5.5" >Glacier</hop>
+  <hop alpha="3.2" >Hallertauer</hop>
+  <hop alpha="2.9" >Hersbrucker</hop>
+  <hop alpha="6.5" >Horizon</hop>
+  <hop alpha="5.1" >Kent Golding</hop>
+  <hop alpha="2.7" >Liberty</hop>
+  <hop alpha="12"  >Magnum</hop>
+  <hop alpha="4.3" >Mt. Hood</hop>
+  <hop alpha="14.5">Newport</hop>
+  <hop alpha="7.0" >Northern Brewer</hop>
+  <hop alpha="13.9">Nugget</hop>
+  <hop alpha="8.3" >Perle</hop>
+  <hop alpha="6.7" >Pride of Ringwood</hop>
+  <hop alpha="7.3" >Progress</hop>
+  <hop alpha="6.0" >Santiam</hop>
+  <hop alpha="3.5" >Saaz</hop>
+  <hop alpha="2.5" >Spalt</hop>
+  <hop alpha="7.5" >Sterling</hop>
+  <hop alpha="4.0" >Strisselspalt</hop>
+  <hop alpha="4.0" >Styrian Golding</hop>
+  <hop alpha="10.7">Target</hop>
+  <hop alpha="3.7" >Tettnanger</hop>
+  <hop alpha="6.0" >Tradition</hop>
+  <hop alpha="3.3" >Ultra</hop>
+  <hop alpha="5.5" >Vanguard</hop>
+  <hop alpha="15.0">Warrior</hop>
+  <hop alpha="4.5" >Willamette</hop>
+  <hop alpha="13.5">Zeus</hop>
+ </hops>
+ <miscingredients>
+  <miscingredient type="Other"                     >Generic ingredient</miscingredient>
+  <miscingredient type="Fining"                    >Finings</miscingredient>
+  <miscingredient type="Fining"                    >Irish Moss</miscingredient>
+  <miscingredient type="Fining"                    >Polyclar</miscingredient>
+  <miscingredient type="Fining"                    >Silica Gel</miscingredient>
+  <miscingredient type="Flavor"                    >Apricot Extract</miscingredient>
+  <miscingredient type="Flavor"                    >Cherry Extract</miscingredient>
+  <miscingredient type="Flavor"                    >Peach Extract</miscingredient>
+  <miscingredient type="Flavor"                    >Raspberry Extract</miscingredient>
+  <miscingredient type="Spice"                     >Orange Peel, Bitter</miscingredient>
+  <miscingredient type="Spice"                     >Orange Peel, Sweet</miscingredient>
+  <miscingredient type="Spice"                     >Star Anise</miscingredient>
+  <miscingredient type="Spice"                     >Corriander Seed</miscingredient>
+  <miscingredient type="Spice"                     >Cardamom Seed</miscingredient>
+  <miscingredient type="Yeast" notes="culture"     >Brettanomyces Bruxellensis</miscingredient>
+  <miscingredient type="Yeast" notes="culture"     >Brettanomyces Claussenii</miscingredient>
+  <miscingredient type="Yeast" notes="culture"     >Brettanomyces Lambicus</miscingredient>
+  <miscingredient type="Yeast" notes="culture"     >Lactobacillus Delbrueckii</miscingredient>
+  <miscingredient type="Yeast" notes="culture"     >Pediococcus cerevisiae</miscingredient>
+  <miscingredient type="Yeast"                     >Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Lager yeast</miscingredient>
+  <miscingredient type="Yeast"                     >American Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >American Lager yeast</miscingredient>
+  <miscingredient type="Yeast"                     >American Wheat yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Australian Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Bavarian Lager yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Bavarian Wheat yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Belgian Abbey yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Belgian Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Belgian Fruit yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Belgian Lambic blend</miscingredient>
+  <miscingredient type="Yeast"                     >Belgian Strong Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Belgian Wheat yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Belgian Witbier yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Bohemian Lager yeast</miscingredient>
+  <miscingredient type="Yeast"                     >British Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >California Lager yeast</miscingredient>
+  <miscingredient type="Yeast"                     >California Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Czech Pils yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Danish Lager yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Dry English Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >English Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >European Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >European Lager yeast</miscingredient>
+  <miscingredient type="Yeast"                     >German Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >German Wheat yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Irish Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Kolsch yeast</miscingredient>
+  <miscingredient type="Yeast"                     >London Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >London ESB Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Munich Lager yeast</miscingredient>
+  <miscingredient type="Yeast"                     >North American Lager yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Northwest Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Pilsen Lager yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Ringwood Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Scottish Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Trappist Ale yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Trappist High Gravity</miscingredient>
+  <miscingredient type="Yeast"                     >Weihenstephan Weizen yeast</miscingredient>
+  <miscingredient type="Yeast"                     >Whitbread Ale yeast</miscingredient>
+ </miscingredients>
+ <utilization>
+  <entry time="90" util="31" />
+  <entry time="80" util="30" />
+  <entry time="70" util="29" />
+  <entry time="60" util="28" />
+  <entry time="45" util="26" />
+  <entry time="40" util="22" />
+  <entry time="35" util="18" />
+  <entry time="30" util="15" />
+  <entry time="25" util="12" />
+  <entry time="20" util="10" />
+  <entry time="15" util="8" />
+  <entry time="10" util="6" />
+  <entry time="05" util="5" />
+  <entry time="01" util="1" />
+  <entry time="00" util="0" />
+ </utilization>
+</qbrewdata>

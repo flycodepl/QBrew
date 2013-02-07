@@ -1,0 +1,481 @@
+<ui version="4.0" >
+ <class>View</class>
+ <widget class="QWidget" name="View" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>677</width>
+    <height>328</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>View</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <layout class="QGridLayout" >
+     <item row="0" column="0" >
+      <widget class="QLabel" name="titlelabel" >
+       <property name="text" >
+        <string>&amp;Title</string>
+       </property>
+       <property name="buddy" >
+        <cstring>titleedit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" >
+      <widget class="QLineEdit" name="titleedit" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+         <horstretch>2</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip" >
+        <string>Recipe Title</string>
+       </property>
+       <property name="whatsThis" >
+        <string>&lt;p>Use this field to enter the title of the recipe&lt;/p></string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2" >
+      <widget class="QLabel" name="stylelabel" >
+       <property name="frameShape" >
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow" >
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="text" >
+        <string>&amp;Style</string>
+       </property>
+       <property name="buddy" >
+        <cstring>stylecombo</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3" >
+      <widget class="QComboBox" name="stylecombo" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip" >
+        <string>Recipe Style</string>
+       </property>
+       <property name="whatsThis" >
+        <string>&lt;p>Use this control to select the style of recipe.&lt;/p>
+&lt;p>This only affects the minimum and maximum values in the &lt;em>characteristics&lt;/em> section&lt;/p></string>
+       </property>
+       <property name="duplicatesEnabled" >
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" >
+      <widget class="QLabel" name="brewerlable" >
+       <property name="text" >
+        <string>&amp;Brewer</string>
+       </property>
+       <property name="buddy" >
+        <cstring>breweredit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" >
+      <widget class="QLineEdit" name="breweredit" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+         <horstretch>2</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip" >
+        <string>Brewer Name</string>
+       </property>
+       <property name="whatsThis" >
+        <string>&lt;p>Use this field to enter the name of the brewer&lt;/p></string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2" >
+      <widget class="QLabel" name="sizelabel" >
+       <property name="text" >
+        <string>Si&amp;ze</string>
+       </property>
+       <property name="buddy" >
+        <cstring>sizespin</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3" >
+      <layout class="QHBoxLayout" >
+       <item>
+        <widget class="QDoubleSpinBox" name="sizespin" >
+         <property name="toolTip" >
+          <string>Batch size</string>
+         </property>
+         <property name="whatsThis" >
+          <string>&lt;p>Use this control to enter the size of the recipe batch&lt;/p></string>
+         </property>
+         <property name="accelerated" >
+          <bool>true</bool>
+         </property>
+         <property name="maximum" >
+          <double>5000.000000000000000</double>
+         </property>
+         <property name="singleStep" >
+          <double>0.250000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>140</width>
+           <height>27</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="stylebox" >
+     <property name="title" >
+      <string>stylebox</string>
+     </property>
+     <layout class="QHBoxLayout" >
+      <item>
+       <layout class="QGridLayout" >
+        <property name="leftMargin" >
+         <number>0</number>
+        </property>
+        <property name="topMargin" >
+         <number>0</number>
+        </property>
+        <property name="rightMargin" >
+         <number>0</number>
+        </property>
+        <property name="bottomMargin" >
+         <number>0</number>
+        </property>
+        <property name="horizontalSpacing" >
+         <number>3</number>
+        </property>
+        <property name="verticalSpacing" >
+         <number>3</number>
+        </property>
+        <item row="0" column="1" >
+         <widget class="QLabel" name="ogmin" >
+          <property name="text" >
+           <string>1.000</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QLabel" name="ogmax" >
+          <property name="text" >
+           <string>1.000</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" >
+         <widget class="QLabel" name="ogminlabel" >
+          <property name="text" >
+           <string>Minimum Gravity:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" >
+         <widget class="QLabel" name="ogreclabel" >
+          <property name="text" >
+           <string>Recipe Gravity:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QLabel" name="ogmaxlabel" >
+          <property name="text" >
+           <string>Maximum Gravity:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" >
+         <widget class="QLabel" name="ogrec" >
+          <property name="text" >
+           <string>1.000</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QGridLayout" >
+        <property name="leftMargin" >
+         <number>0</number>
+        </property>
+        <property name="topMargin" >
+         <number>0</number>
+        </property>
+        <property name="rightMargin" >
+         <number>0</number>
+        </property>
+        <property name="bottomMargin" >
+         <number>0</number>
+        </property>
+        <property name="horizontalSpacing" >
+         <number>3</number>
+        </property>
+        <property name="verticalSpacing" >
+         <number>3</number>
+        </property>
+        <item row="0" column="1" >
+         <widget class="QLabel" name="ibumin" >
+          <property name="text" >
+           <string>000</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" >
+         <widget class="QLabel" name="ibuminlabel" >
+          <property name="text" >
+           <string>Minimum Bitterness:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QLabel" name="ibumax" >
+          <property name="text" >
+           <string>000</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" >
+         <widget class="QLabel" name="ibureclabel" >
+          <property name="text" >
+           <string>Recipe Bitterness:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" >
+         <widget class="QLabel" name="iburec" >
+          <property name="text" >
+           <string>000</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QLabel" name="ibumaxlabel" >
+          <property name="text" >
+           <string>Maximum Bitterness:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QGridLayout" >
+        <property name="leftMargin" >
+         <number>0</number>
+        </property>
+        <property name="topMargin" >
+         <number>0</number>
+        </property>
+        <property name="rightMargin" >
+         <number>0</number>
+        </property>
+        <property name="bottomMargin" >
+         <number>0</number>
+        </property>
+        <property name="horizontalSpacing" >
+         <number>3</number>
+        </property>
+        <property name="verticalSpacing" >
+         <number>3</number>
+        </property>
+        <item row="1" column="0" >
+         <widget class="QLabel" name="srmmaxlabel" >
+          <property name="text" >
+           <string>Maximum Color:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QLabel" name="srmmax" >
+          <property name="text" >
+           <string>00.0°</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" >
+         <widget class="QLabel" name="srmminlabel" >
+          <property name="text" >
+           <string>Minimum Color:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" >
+         <widget class="QLabel" name="srmmin" >
+          <property name="text" >
+           <string>00.0°</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" >
+         <widget class="QLabel" name="srmrec" >
+          <property name="text" >
+           <string>00.0°</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" >
+         <widget class="QLabel" name="srmreclabel" >
+          <property name="text" >
+           <string>Recipe Color:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QGridLayout" >
+        <property name="leftMargin" >
+         <number>0</number>
+        </property>
+        <property name="topMargin" >
+         <number>0</number>
+        </property>
+        <property name="rightMargin" >
+         <number>0</number>
+        </property>
+        <property name="bottomMargin" >
+         <number>0</number>
+        </property>
+        <property name="horizontalSpacing" >
+         <number>3</number>
+        </property>
+        <property name="verticalSpacing" >
+         <number>3</number>
+        </property>
+        <item row="2" column="1" >
+         <widget class="QLabel" name="abw" >
+          <property name="text" >
+           <string>00.0%</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QLabel" name="abvlabel" >
+          <property name="text" >
+           <string>Alcohol by Volume:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" >
+         <widget class="QLabel" name="abwlabel" >
+          <property name="text" >
+           <string>Alcohol by Weight:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QLabel" name="abv" >
+          <property name="text" >
+           <string>00.0%</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" >
+         <widget class="QLabel" name="fglabel" >
+          <property name="text" >
+           <string>Estimate FG:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" >
+         <widget class="QLabel" name="fg" >
+          <property name="text" >
+           <string>1.000</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="ingredients" >
+     <property name="minimumSize" >
+      <size>
+       <width>0</width>
+       <height>128</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>titleedit</tabstop>
+  <tabstop>breweredit</tabstop>
+  <tabstop>stylecombo</tabstop>
+  <tabstop>sizespin</tabstop>
+  <tabstop>ingredients</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../qbrew.qrc" />
+ </resources>
+ <connections/>
+</ui>

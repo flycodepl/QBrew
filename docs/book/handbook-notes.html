@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta name="generator" content="HTML Tidy, see www.w3.org">
+    <meta http-equiv="Content-Type" content=
+    "text/html; charset=ISO-8859-1">
+    <title> Chapter 3. Designer's Notes</title>
+    <meta name="generator" content=
+    "DocBook XSL Stylesheets V1.71.1">
+    <link rel="start" href="handbook-index.html" title="The QBrew Handbook">
+    <link rel="up" href="handbook-index.html" title="The QBrew Handbook">
+    <link rel="prev" href="handbook-configuration.html" title=
+    "Configuration">
+    <link rel="next" href="handbook-hop.html" title="Hop Calculations">
+  </head>
+  <body bgcolor="white" text="black" link="#0000FF" vlink="#840084"
+  alink="#0000FF">
+    <div class="navheader">
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <th colspan="3" align="center">
+            Chapter&nbsp;3.&nbsp;Designer's Notes
+          </th>
+        </tr>
+        <tr>
+          <td width="20%" align="left">
+            <a accesskey="p" href=
+            "handbook-configuration.html">Prev</a>&nbsp;
+          </td>
+          <th width="60%" align="center">
+            &nbsp;
+          </th>
+          <td width="20%" align="right">
+            &nbsp;<a accesskey="n" href="handbook-hop.html">Next</a>
+          </td>
+        </tr>
+      </table>
+      <hr>
+    </div>
+    <div class="chapter" lang="en">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title">
+              <a name="notes"></a>Chapter&nbsp;3.&nbsp;Designer's
+              Notes
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="toc">
+        <p>
+          <b>Table of Contents</b>
+        </p>
+        <dl>
+          <dt>
+            <span class="section"><a href="handbook-notes.html#grain">Grain
+            Calculations</a></span>
+          </dt>
+          <dt>
+            <span class="section"><a href="handbook-hop.html">Hop
+            Calculations</a></span>
+          </dt>
+        </dl>
+      </div>
+      <p>
+        <span class="application">QBrew</span> aims to be a simple
+        streamlined homebrewing recipe calculator. As such, it
+        doesn't include features that other software designed for
+        professional brewing might include. This is not a flaw on
+        the part of <span class="application">QBrew</span>, but a
+        conscious choice to moderate the scope of the software.
+        Emails and forum posts praising the <span class=
+        "application">QBrew</span> interface tell me that his was a
+        good decision.
+      </p>
+      <div class="section" lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a name="grain"></a>Grain Calculations
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p>
+          The basic gravity calculation is the sum of all grains'
+          extract times quantity, divided by the batch size. Mashed
+          grains will have their extract modified by the mash
+          efficiency. Steeped grains will use a lesser efficiency,
+          typically half of their extract.
+        </p>
+        <p>
+          The color calculated is in <abbr class=
+          "abbrev">SRM</abbr>, not in <abbr class=
+          "abbrev">HCU</abbr> (homebrew color units). <abbr class=
+          "abbrev">HCU</abbr> is the sum of all grains' color times
+          quantity, divided by the batch size. This is only
+          accurate for very low color values. The default
+          conversion to SRM uses the formula discovered by Ray
+          Daniels, which is <span class=
+          "emphasis"><em>SRM=(MCUx0.2)+8.4</em></span> (for values
+          of HCU over 8.0). An alternate color calculation
+          discovered by Dan Morey is <span class=
+          "emphasis"><em>SRM=1.4922x[(MCU)^0.6859]</em></span> (for
+          values of SRM less than 50). To change to the Morey
+          method, open up the <span><strong class=
+          "command">Configure...</strong></span> dialog and check
+          the <span><strong class="command">Use Morey color
+          calculation</strong></span> box. More information on
+          color calculations can be found at "Approximating SRM
+          Beer Color" &lt;http://hbd.org/babble/Color.htm&gt;, and
+          "Beer's Law"
+          &lt;http://www.brewingtechniques.com/brewingtechniques/beerslaw/morey.html&gt;.
+        </p>
+        <p>
+          Final gravity is assumed to be 25% of the <abbr class=
+          "abbrev">OG</abbr>. Looking through the <abbr class=
+          "abbrev">AHB</abbr> style guide, this is the same
+          assumption they made. The alcoholic content calculations
+          were derived from Noonan's <em class="citetitle">New
+          Brewing Lager Beer</em>, and based on this <abbr class=
+          "abbrev">FG</abbr> assumption.
+        </p>
+      </div>
+    </div>
+    <div class="navfooter">
+      <hr>
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left">
+            <a accesskey="p" href=
+            "handbook-configuration.html">Prev</a>&nbsp;
+          </td>
+          <td width="20%" align="center">
+            &nbsp;
+          </td>
+          <td width="40%" align="right">
+            &nbsp;<a accesskey="n" href="handbook-hop.html">Next</a>
+          </td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">
+            Configuration&nbsp;
+          </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="handbook-index.html">Home</a>
+          </td>
+          <td width="40%" align="right" valign="top">
+            &nbsp;Hop Calculations
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
+

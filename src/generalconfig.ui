@@ -1,0 +1,187 @@
+<ui version="4.0" >
+ <author></author>
+ <comment></comment>
+ <exportmacro></exportmacro>
+ <class>GeneralConfig</class>
+ <widget class="QWidget" name="GeneralConfig" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>287</width>
+    <height>326</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <property name="margin" >
+    <number>9</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="appearancebox" >
+     <property name="title" >
+      <string>Appearance Options</string>
+     </property>
+     <property name="flat" >
+      <bool>false</bool>
+     </property>
+     <property name="checkable" >
+      <bool>false</bool>
+     </property>
+     <layout class="QGridLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item row="0" column="0" >
+       <widget class="QLabel" name="lookfeellabel" >
+        <property name="text" >
+         <string>&amp;Look and feel</string>
+        </property>
+        <property name="buddy" >
+         <cstring>lookfeel</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="QComboBox" name="lookfeel" >
+        <property name="whatsThis" >
+         <string>&lt;p>You may select a different look and feel for the application. This will affect the appearance of the application's controls and widgets.&lt;/p></string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2" >
+       <widget class="QCheckBox" name="showsplash" >
+        <property name="whatsThis" >
+         <string>&lt;p>Select this option to show the splash screen when the program starts.&lt;/p></string>
+        </property>
+        <property name="text" >
+         <string>&amp;Show splash screen</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="filebox" >
+     <property name="title" >
+      <string>File Options</string>
+     </property>
+     <layout class="QGridLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item row="3" column="0" >
+       <widget class="QCheckBox" name="loadlast" >
+        <property name="whatsThis" >
+         <string>&lt;p>Select this option to automatically load the last file used in this program.&lt;/p></string>
+        </property>
+        <property name="text" >
+         <string>Load last &amp;file</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" >
+       <widget class="QCheckBox" name="autobackup" >
+        <property name="whatsThis" >
+         <string>&lt;p>Selecting this will cause the program to automatically backup every file that you open and modify.&lt;/p></string>
+        </property>
+        <property name="text" >
+         <string>Enable auto&amp;backup</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" >
+       <widget class="QSpinBox" name="saveinterval" >
+        <property name="whatsThis" >
+         <string>&lt;p>This field will allow you to select the Autosave interval.&lt;/p></string>
+        </property>
+        <property name="suffix" >
+         <string> Minutes</string>
+        </property>
+        <property name="maximum" >
+         <number>30</number>
+        </property>
+        <property name="singleStep" >
+         <number>5</number>
+        </property>
+        <property name="value" >
+         <number>5</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QCheckBox" name="autosave" >
+        <property name="whatsThis" >
+         <string>&lt;p>Enables autosaving of files. If this is checked, files will be automatically saved at the selected interval.&lt;/p></string>
+        </property>
+        <property name="text" >
+         <string>Enable &amp;autosave</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="QSpinBox" name="recentnum" >
+        <property name="whatsThis" >
+         <string>&lt;p>Use this to set the number of files displayed in the &lt;b>Open Recent...&lt;/b> menu&lt;/p></string>
+        </property>
+        <property name="maximum" >
+         <number>50</number>
+        </property>
+        <property name="value" >
+         <number>5</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" >
+       <widget class="QLabel" name="recentlabel" >
+        <property name="text" >
+         <string>Number of &amp;recent files</string>
+        </property>
+        <property name="buddy" >
+         <cstring>recentnum</cstring>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <pixmapfunction></pixmapfunction>
+ <tabstops>
+  <tabstop>lookfeel</tabstop>
+  <tabstop>showsplash</tabstop>
+  <tabstop>recentnum</tabstop>
+  <tabstop>autosave</tabstop>
+  <tabstop>saveinterval</tabstop>
+  <tabstop>autobackup</tabstop>
+  <tabstop>loadlast</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

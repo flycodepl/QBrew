@@ -1,0 +1,113 @@
+<ui version="4.0" >
+ <class>RecipeConfig</class>
+ <widget class="QWidget" name="RecipeConfig" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>238</width>
+    <height>151</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Recipe Configuration</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <widget class="QGroupBox" name="recipebox" >
+     <property name="title" >
+      <string>Recipe Defaults</string>
+     </property>
+     <layout class="QGridLayout" >
+      <item row="0" column="0" >
+       <widget class="QLabel" name="batchlabel" >
+        <property name="text" >
+         <string>&amp;Batch size</string>
+        </property>
+        <property name="buddy" >
+         <cstring>batch</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="QDoubleSpinBox" name="batch" >
+        <property name="whatsThis" >
+         <string>&lt;p>Enter the default batch size you wish to use. You may always change an individual recipe's size, but this determines the default size for new recipes.&lt;/p></string>
+        </property>
+        <property name="accelerated" >
+         <bool>true</bool>
+        </property>
+        <property name="maximum" >
+         <double>100.000000000000000</double>
+        </property>
+        <property name="singleStep" >
+         <double>0.250000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="stylelabel" >
+        <property name="text" >
+         <string>&amp;Recipe style</string>
+        </property>
+        <property name="buddy" >
+         <cstring>stylebox</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" >
+       <widget class="QComboBox" name="stylebox" >
+        <property name="whatsThis" >
+         <string>&lt;p>Select the default recipe style you wish to use. You may always change an individual recipe's style, but this determines the default style for new recipes.&lt;/p></string>
+        </property>
+        <property name="duplicatesEnabled" >
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" >
+       <widget class="QLabel" name="hoptypelabel" >
+        <property name="text" >
+         <string>&amp;Hop type</string>
+        </property>
+        <property name="buddy" >
+         <cstring>hoptype</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" >
+       <widget class="QComboBox" name="hoptype" >
+        <property name="whatsThis" >
+         <string>&lt;p>Select the default hops type you wish to use. You may always change an individual hop's form, but this determines the default form when adding new hops to a recipe.&lt;/p></string>
+        </property>
+        <property name="duplicatesEnabled" >
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>220</width>
+       <height>21</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>batch</tabstop>
+  <tabstop>stylebox</tabstop>
+  <tabstop>hoptype</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,38 @@
+Near and Long Term Future Plans for QBrew
+---------------------------------------------
+
+Short Term
+----------
+Undo/redo framework
+Unit tests
+QHelpEngine
+Imperial units
+Option to use Plato instead of SG
+Session management
+Cut/copy/paste. At minimum copy the characteristics to clipboard.
+Additional fields: ingredient notes (also good for dryhopping)
+Update the database
+More than just "unit" for misc ingredients (Tsp, etc)
+Possibility of adding a list of fermentation times.
+Different spinbox increments depending on units used (0.25kg is too much)
+
+Medium Term
+-----------
+Unit tests
+More detailed batch notes, or batch section (measured OG, FG, etc)
+"Contribution" column to grain page ((quantity * extract) / batch_size)
+Calculate mash efficiency and store for later use
+
+Long Term
+---------
+Inventory management
+Multiple recipes in model
+
+SPECIAL OFFER!!!
+
+Hey kids! You too can participate in the exiting world of software
+development! Just collect five proof-of-purchase stickers from the
+back of QBrew boxes and send them in with your favorite feature
+request. If YOUR feature is selected, your next version of QBrew with
+YOUR feature is absolutely free!
+

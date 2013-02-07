@@ -1,0 +1,343 @@
+#!/bin/sh
+# Copyright 2007-2008 David Johnson
+# Configuration script for use with qt/qmake projects. This configure
+# script is free software; the author gives unlimited permission to
+# copy, distribute and modify it. Portions of this script adapted
+# from the Qt configuration script.
+
+PACKAGE=qbrew
+PROFILE=qbrew.pro
+PREFIX=/usr/local
+QTMINVER=4.3.0
+LOGFILE=config.log
+BUILDDIR=.config
+
+### Messages ########################################################
+
+usage() {
+cat <<EOT
+Usage: $0 [OPTION]...
+
+This script creates the necessary configuration files for building
+
+Main options:
+  --prefix=[path]     Base path for build/install.  Default: /usr/local
+  --bindir=[path]     Directory for binaries.  Default: PREFIX/bin
+  --datadir=[path]    Directory for data.  Default: PREFIX/share
+  --docdir=[path]     Directory for docs.  Default: PREFIX/share/doc
+  --qtdir=[path]      Directory where Qt is installed
+  --spec=[spec]       Spec to use for QMAKESPEC
+  --debug             Enable debug output
+  --help              This help text
+
+EOT
+}
+
+qt_info() {
+cat <<EOF
+Be sure you have a properly configured Qt build environment. This application
+requires a Qt library version of $QTMINVER or greater. Some systems split Qt
+into separate runtime and development packages. If this is your case, make sure
+you have both. The 'qmake' command should be in your path, and you may need to
+use either the QTDIR environment variable or the --qtdir configure option. It
+may be necessary to use the --spec option if qmake cannot determine your build
+system. If your qmake has been installed under a different name, then it may be
+necessary to use the QMAKE variable.
+EOF
+}
+
+### Tests ###########################################################
+
+make_test() {
+    if [ -z "$MAKE" ] ; then
+	for mk in gmake make; do
+            if which $mk >/dev/null 2>&1; then
+                MAKE=`which $mk`
+                break
+            fi
+	done
+	if [ -z "$MAKE" ] ; then
+            echo "ERROR: cannot find 'make' or 'gmake'. Exiting"
+            echo "ERROR: cannot find 'make' or 'gmake'. Exiting" >> $LOGFILE
+            exit 1
+	fi
+    fi
+}
+
+qmake_test() {
+    echo -n "Checking for qmake..."
+
+    # check QTDIR
+    if [ -z "$QMAKE" ] ; then
+        result=$QTDIR/bin/qmake
+        if [ -x "$result" ] ; then
+            QMAKE=$result
+        fi
+        result=$QTDIR/bin/lrelease
+        if [ -x "$result" ] ; then
+            LRELEASE=$result
+        fi
+    fi
+
+    # check PATH
+    if [ -z "$QMAKE" ] ; then
+        result=`which qmake 2>/dev/null`
+        if [ -x "$result" ] ; then
+            QMAKE=$result
+        fi
+        result=`which lrelease 2>/dev/null`
+        if [ -x "$result" ] ; then
+            LRELEASE=$result
+        fi
+    fi
+
+    # check common rename
+    if [ -z "$QMAKE" ] ; then
+        result=`which qmake-q4 2>/dev/null`
+        if [ -x "$result" ] ; then
+            QMAKE=$result
+        fi
+        result=`which lrelease-q4 2>/dev/null`
+        if [ -x "$result" ] ; then
+            LRELEASE=$result
+        fi
+    fi
+
+    # check pkg-config
+    if [ -z "$QMAKE" ] ; then
+        result=`pkg-config QtCore --variable=exec_prefix 2>/dev/null`
+        if [ ! -z "$result" ] ; then
+            result=$result/bin/qmake
+            if [ -x "$result" ] ; then
+                QMAKE=$result
+            fi
+            result=$result/bin/lrelease
+            if [ -x "$result" ] ; then
+                LRELEASE=$result
+            fi
+        fi
+    fi
+
+    if [ -z "$QMAKE" ] ; then
+        echo "no!"
+        echo "ERROR: unable to find the 'qmake' tool"
+        echo "ERROR: unable to find the 'qmake' tool" >> $LOGFILE
+        qt_info
+        exit 1;
+    fi
+
+    echo "yes"
+    echo "found qmake at $QMAKE" >> $LOGFILE
+    echo "found lrelease at $LRELEASE" >> $LOGFILE
+}
+
+qtversion_test() {
+    echo -n "Checking Qt version..."
+
+    result=`$QMAKE -query QT_VERSION`
+    if [ "$result" '<' "$QTMINVER" ] ; then
+        echo "no!"
+        echo "ERROR: incorrect Qt version found: $result"
+        echo "ERROR: incorrect Qt version found: $result" >> $LOGFILE
+        qt_info
+        exit 1;
+    fi      
+    echo "$result"
+    echo "found Qt version $result" >> $LOGFILE
+}
+
+build_test() {
+    echo -n "Checking if a simple Qt program builds..."
+    cwd=`pwd`
+    rm -rf $BUILDDIR
+    mkdir -p $BUILDDIR
+    cd $BUILDDIR
+
+# write it
+cat >config.pro <<EOT
+TARGET = config
+CONFIG += qt $BUILDMODE
+CONFIG -= app_bundle
+QT -= gui
+HEADERS += config.h
+SOURCES += config.cpp
+EOT
+
+cat >config.h <<EOT
+#include <QtCore>
+class Config : public QCoreApplication {
+public:
+Config(int &argc, char **argv);
+};
+EOT
+
+cat >config.cpp <<EOT
+#include "config.h"
+Config::Config(int &argc, char **argv)
+: QCoreApplication(argc,argv) {setApplicationName("config");}
+int main(int argc, char **argv)
+{
+Config app(argc,argv);
+return 0;
+}
+EOT
+
+    # build it
+    $QMAKE config.pro > /dev/null
+    $MAKE >>$LOGFILE 2>&1
+    result=$?
+
+    cd $cwd
+    rm -rf $BUILDDIR
+
+    if [ "$result" != "0" ] ; then
+        echo "no!"
+        echo "ERROR: could not build a simple Qt program. See config.log"
+        echo "ERROR: could not build a simple Qt program" >> $LOGFILE
+        qt_info
+        exit 1;
+    fi
+    echo "yes"
+    echo "built simple Qt program" >> $LOGFILE
+}
+
+### Parse options ###################################################
+
+parse_options() {
+    while [ $# -gt 0 ] ; do
+        case "$1" in
+            --prefix=*)
+                PREFIX="${1#--prefix=}"
+                shift
+                ;;
+
+            --bindir=*)
+                BINDIR="${1#--bindir=}"
+                shift
+                ;;
+
+            --datadir=*)
+                DATADIR="${1#--datadir=}"
+                shift
+                ;;
+
+            --docdir=*)
+                DOCDIR="${1#--docdir=}"
+                shift
+                ;;
+
+            --qtdir=*)
+                QTDIR="${1#--qtdir=}"
+                shift
+                ;;
+
+            --spec=*)
+                QMAKESPEC="${1#--spec=}"
+                shift
+                ;;
+
+            --debug=*)
+                ENABLE_DEBUG="${1#--debug=}"
+                shift
+                ;;
+
+            --debug)
+                ENABLE_DEBUG="yes"
+                shift
+                ;;
+
+            --help) usage; exit ;;
+            *) usage; exit 1 ;;
+        esac
+    done
+}
+
+### Main ############################################################
+
+echo "Configuring $PACKAGE package..."
+
+### initialize
+
+SOURCEPATH=`dirname $0`
+SOURCEPATH=`(cd $SOURCEPATH; /bin/pwd)`
+BUILDDIR=$SOURCEPATH/$BUILDDIR
+LOGFILE=$SOURCEPATH/$LOGFILE
+
+if [ -e $LOGFILE ] ; then rm $LOGFILE ; fi
+echo "configure command: $0 $@" > $LOGFILE
+echo `date` >>$LOGFILE
+
+### parse command options
+
+parse_options $@
+
+QMAKE=${QMAKE:-}
+LRELEASE=${LRELEASE:-}
+PREFIX=${PREFIX:-/usr/local}
+BINDIR=${BINDIR:-$PREFIX/bin}
+DATADIR=${DATADIR:-$PREFIX/share/$PACKAGE}
+DOCDIR=${DOCDIR:-$PREFIX/share/doc/$PACKAGE}
+
+if [ "$ENABLE_DEBUG" = "yes" ] ; then
+    BUILDMODE="debug"
+else
+    BUILDMODE="release"
+fi
+
+echo >> $LOGFILE
+echo PREFIX=$PREFIX >> $LOGFILE
+echo BINDIR=$BINDIR >> $LOGFILE
+echo DATADIR=$DATADIR >> $LOGFILE
+echo DOCDIR=$DOCDIR >> $LOGFILE
+echo QTDIR=$QTDIR >> $LOGFILE
+echo QMAKESPEC=$QMAKESPEC >> $LOGFILE
+echo ENABLE_DEBUG=$ENABLE_DEBUG >> $LOGFILE
+echo BUILDMODE=$BUILDMODE >> $LOGFILE
+echo >> $LOGFILE
+
+### tests
+
+make_test
+qmake_test
+qtversion_test
+build_test
+
+### export variables
+
+export BINDIR
+export DATADIR
+export DOCDIR
+if [ ! -z $QTDIR ] ; then
+    export QTDIR
+fi
+if [ ! -z $QMAKESPEC ] ; then
+    export QMAKESPEC
+fi
+
+### create translation
+
+echo "Creating translations"
+
+$LRELEASE $PROFILE > /dev/null 2>> $LOGFILE
+
+### create Makefile
+
+echo "Creating Makefile"
+
+$QMAKE "QMAKE_CXXFLAGS=\"$CXXFLAGS\"" "QMAKE_LFLAGS=\"$LDFLAGS\"" \
+    -o $SOURCEPATH/Makefile "CONFIG+=$BUILDMODE configure" \
+    $PROFILE > /dev/null 2>> $LOGFILE
+
+if [ $? != "0" ] ; then
+    echo "ERROR: could not create Makefile. See config.log"
+    echo "ERROR: could not create Makefile." >> $LOGFILE
+    echo "Command: $QMAKE -o $SOURCEPATH/Makefile \"CONFIG+=$BUILDMODE\" $PROFILE" >> $LOGFILE
+    exit 1
+fi
+
+### finished
+
+echo
+echo "$PACKAGE configured successfully"
+echo "Relax, don't worry, have a homebrew!"
+echo
