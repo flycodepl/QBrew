@@ -1,0 +1,3 @@
+docs/book/*html usr/share/doc/qbrew/book/
+docs/primer/*html usr/share/doc/qbrew/primer/
+debian/qbrew.desktop /usr/share/applications/

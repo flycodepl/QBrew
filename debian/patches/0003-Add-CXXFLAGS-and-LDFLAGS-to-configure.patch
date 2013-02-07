@@ -1,0 +1,24 @@
+From: Tobias Quathamer <toddy@debian.org>
+Date: Wed, 29 Feb 2012 14:23:08 +0100
+Subject: Add CXXFLAGS and LDFLAGS to configure
+
+---
+ configure |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+diff --git a/configure b/configure
+index 29e3a62..4e5d099 100755
+--- a/configure
++++ b/configure
+@@ -300,7 +300,9 @@ fi
+ 
+ echo "Creating Makefile"
+ 
+-$QMAKE -o $SOURCEPATH/Makefile "CONFIG+=$BUILDMODE configure" $PROFILE > /dev/null 2>> $LOGFILE
++$QMAKE "QMAKE_CXXFLAGS=\"$CXXFLAGS\"" "QMAKE_LFLAGS=\"$LDFLAGS\"" \
++    -o $SOURCEPATH/Makefile "CONFIG+=$BUILDMODE configure" \
++    $PROFILE > /dev/null 2>> $LOGFILE
+ 
+ if [ $? != "0" ] ; then
+     echo "ERROR: could not create Makefile. See config.log"
+-- 

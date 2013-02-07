@@ -1,0 +1,8 @@
+?package(qbrew):\
+    needs="X11" \
+    section="Applications/Data Management" \
+    title="QBrew" \
+    command="/usr/bin/qbrew" \
+    longtitle="Homebrewer's recipe calculator" \
+    icon16x16="/usr/share/pixmaps/qbrew_16x16.xpm" \
+    icon32x32="/usr/share/pixmaps/qbrew_32x32.xpm"

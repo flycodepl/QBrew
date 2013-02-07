@@ -1,0 +1,348 @@
+qbrew (0.4.1-3) unstable; urgency=low
+
+  * Convert to source format 3.0 (quilt)
+  * Use debian/patches for upstream changes
+  * Update German translation of program
+  * Use machine-readable copyright format v1.0
+  * Switch to debhelper v9
+  * Reduce debian/rules for debhelper v9
+  * Remove dh-make comments from debian/rules
+  * Remove versioned dependency of libqt4-dev (Qt 4.3 is long gone now)
+  * Create and install a .desktop file for qbrew
+  * Add lrelease to configuration step
+  * Update to Standards-Version 3.9.3
+
+ -- Tobias Quathamer <toddy@debian.org>  Fri, 02 Mar 2012 00:12:29 +0100
+
+qbrew (0.4.1-2) unstable; urgency=low
+
+  * Change maintainer name
+  * Update Standards-Version to 3.8.0, no changes needed
+  * Use debhelper v7 and use shorter debian/rules
+  * Add ${misc:Depends} to debian/control to fix a Lintian warning
+  * Use © in debian/copyright
+
+ -- Tobias Quathamer <toddy@debian.org>  Wed, 18 Feb 2009 16:15:54 +0100
+
+qbrew (0.4.1-1) unstable; urgency=low
+
+  * New Upstream Version
+  * Remove config.log in distclean target, patch forwarded upstream
+  * debian/control:
+    - Adjust Build-Depends for minimal Qt version to 4.3
+    - Remove toolkit from package synopsis
+    - Remove Vcs-Browser, because it does not contain Debian packaging
+      information
+
+ -- Tobias Toedter <toddy@debian.org>  Mon, 26 May 2008 10:13:56 +0200
+
+qbrew (0.4.0-3) unstable; urgency=low
+
+  * Rebuild with libqt4-dev 4.4.0~rc1-4. This fixes a FTBFS with the
+    previous version of libqt4-dev. Closes: #475742, #475813
+  * Change maintainer's e-mail address
+  * Remove DM upload rights
+
+ -- Tobias Toedter <toddy@debian.org>  Tue, 22 Apr 2008 09:37:04 +0200
+
+qbrew (0.4.0-2) unstable; urgency=low
+
+  * Allow Debian-Maintainer upload
+  * Remove XS- prefix from Vcs-Browser in debian/control
+  * Rename doc-base section to "Data Management"
+  * debian/rules:
+    - Use CXXFLAGS instead of CFLAGS
+    - Use LDFLAGS="-Wl,--as-needed" to avoid linking unneeded libraries
+  * Reformat debian/copyright and update year information
+  * Apply patches to upstream sources directly and remove quilt from
+    Build-Depends
+  * Use --debug switch during configure, so that the binary contains
+    debugging symbols when built with DEB_BUILD_OPTIONS=nostrip.
+    Closes: #437852
+  * Update Standards-Version to 3.7.3, no changes needed
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Fri, 11 Apr 2008 22:37:52 +0200
+
+qbrew (0.4.0-1) unstable; urgency=low
+
+  * New upstream version
+  * Fix Lintian warnings:
+    - In debian/rules, exchange "-$(MAKE) distclean" with
+      "[ ! -f Makefile ] || $(MAKE) distclean" to enable the script to
+      catch errors from the clean target.
+    - Change "Apps/Tools" to "Applications/Data Management" in menu and
+      doc-base files
+  * Change watch file to new upstream homepage layout
+  * Remove patches/fix_quoting.diff, it's no longer needed
+  * Refresh remaining patch to apply cleanly, no content changes
+  * Add new fields Homepage and XS-Vcs-Browser to control file
+  * Add stout.qbrew to examples, it's included in upstream again
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Tue,  2 Oct 2007 17:42:47 +0200
+
+qbrew (0.3.10-1) unstable; urgency=low
+
+  * New upstream version
+    - Fix bug which caused qbrew to display only the first item in each
+      section. Closes: #402769
+    - Remove patches that have been applied upstream:
+      - force_release_version.diff
+      - copyright_typo.diff
+      - remove_beerxml_filter.diff
+  * Update remaining patches to apply cleanly, no content changes
+  * Update years in copyright file
+  * Remove TODO from docs, it's no longer included upstream
+  * Remove stout.qbrew from examples, it's no longer included upstream
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Wed, 25 Apr 2007 14:05:57 +0200
+
+qbrew (0.3.9-4) unstable; urgency=low
+
+  * Remove libglib2.0-dev from Build-Depends again, the dependancy has
+    now been added to the libqt4-dev package.
+  * qmake seems to have problems in properly quoting constants given via
+    the -D switch on the command line since version 4.2. The last upload
+    already has a workaround for this, but in order to not FTBFS with
+    previous Qt versions, the Build-Depends on libqt4-dev is now
+    versioned.
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Sun, 22 Oct 2006 18:49:16 +0200
+
+qbrew (0.3.9-3) unstable; urgency=medium
+
+  * Add libglib2.0-dev to Build-Depends to fix an FTBFS error with
+    the new version of libqt4 (4.2.0). Thanks to Martin Michlmayr
+    for the bug report. Closes: #392180
+  * Add quotes around PACKAGE and VERSION definitions in the configure
+    script to make gcc happy
+  * Urgency set to medium as per release policy (RC bug fix)
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Wed, 11 Oct 2006 20:13:54 +0200
+
+qbrew (0.3.9-2) unstable; urgency=low
+
+  * Add patch to remove the BeerXML filter from the open file dialog,
+    because the import filter is not yet implemented. Closes: #385973
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Tue,  5 Sep 2006 16:10:21 +0200
+
+qbrew (0.3.9-1) unstable; urgency=low
+
+  * New upstream release
+    - Code has been rewritten to work with Qt 4
+    - The Database Tool uses a new Qt view class, the segfault which
+      existed in the Qt 3 version is no longer present. Closes: #343910
+  * patches/ directory
+    - All former code changes are integrated or obsolete after the
+      upstream rewrite
+    - The library linking is done much smarter now, so that the stripping
+      of unneeded libraries (introduced in the previous upload) is no
+      longer necessary.
+    - New patch to drop a build dependency on libqt4-debug-dev
+    - New patch to install the handbook and primer HTML files in a
+      proper location
+    - New patch to fix a typo in the copyright dialog box
+  * Build-Depends on quilt to manage the patches
+  * Remove Build-Depends on autotools-dev. The build system uses qmake,
+    which does not need config.sub and config.guess.
+  * Add new file "install" which is used to copy the qbrew handbook and
+    brewing primer to the appropriate locations
+  * Register the brewing primer with doc-base
+  * Update Standards-Version to 3.7.2, no changes needed
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Sat, 19 Aug 2006 12:43:17 +0200
+
+qbrew (0.3.5-3) unstable; urgency=low
+
+  * Added new patch to fix a FTBFS error with GCC 4.1.
+    Thanks to Martin Michlmayr for the report and patch. Closes: #357467
+  * Rewrote upstream's checks for needed libraries to cut down the number
+    of unnecessary linked in libraries. In effect, qbrew does no longer
+    depend on libx11-dev, libice-dev, libsm-dev, and libxext-dev.
+  * Build-Depends-Indep: debhelper >= 5.0.0
+  * Bumped compat file from version 4 to 5
+  * Updated copyright file with current year
+  * Corrected formatting of the Homepage: entry in the description
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Sat, 22 Apr 2006 16:30:32 +0200
+
+qbrew (0.3.5-2) unstable; urgency=low
+
+  * Extracted the pixmaps from the patch into files in the debian
+    directory, so they can be deleted in the clean target
+  * Instead of removing the upstream config.sub and config.guess,
+    they are now backed up and restored in the clean target
+  * Properly escaped a dash in the manpage
+  * Added a new target to debian/rules for regenerating the xpm images
+    for the menu manager (generate-xpm). It requires sodipodi and mogrify
+    and uses the SVG file provided by upstream
+  * New patch (20_controller-warning.diff) which fixes a compiler
+    warning in the files controller.cpp and controller.h
+  * The script configure gets run now without using env for passing
+    parameters; instead, the simpler form NAME=VALUE is used
+  * Warnings about a missing non-virtual destructor in the Qt functions
+    are suppressed currently, those will be fixed with the new release
+    of Qt 4.0
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Tue,  2 Nov 2005 11:33:18 +0100
+
+qbrew (0.3.5-1) unstable; urgency=low
+
+  * New upstream release
+  * Force rebuild of the package for transitions
+    - Link against libqt3-mt instead of libqt3c102-mt for the
+      Qt/KDE transition (Closes: #327939)
+    - Link against libstdc++6 instead of libstdc++5 for the C++ transition
+  * Replaced the build dependency on xlibs-dev with libx11-dev, libsm-dev,
+    libice-dev, and libxext-dev
+  * Dropped the build dependency on dpatch, the patches are now applied
+    with a hand-made system
+  * Updated Standards-Version to 3.6.2, no changes needed
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Thu, 22 Sep 2005 22:57:08 +0200
+
+qbrew (0.3.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Included the file AUTHORS
+  * Fixed handling of config.{guess,sub} -- the files were copied to
+    the wrong location, so they were not used by the configure script
+  * Generated the xpm menu icons from the upstream svg file. They
+    look so much nicer now!
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Mon,  4 Oct 2004 20:08:23 +0200
+
+qbrew (0.3.3.1-1) unstable; urgency=low
+
+  * New upstream release, fixes a bug with spinbuttons under Qt
+  * Build-Depends: on autotools-dev, to handle config.{guess,sub} in a
+    sane way
+  * Build-Depends: on dpatch. The use of dpatch is newly introduced.
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Tue, 18 May 2004 18:49:39 +0200
+
+qbrew (0.3.3-5) unstable; urgency=low
+
+  * Changing the copyright file to say something meaningful about
+    the copyright
+  * Removed xlibs from Build-Depends, since xlibs-dev is already listed
+    there
+  * Removed zlib1g and xutils from Build-Depends, since they both were
+    not needed at all. Oops.
+  * Removed the (pre|post)(inst|rm) scripts, since there were no
+    special actions to perform. The necessary scripts are now generated
+    automatically by dh_installdocs and dh_installmenu
+  * Quoted all strings in the menu file
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Sun,  7 Mar 2004 16:43:23 +0100
+
+qbrew (0.3.3-4) unstable; urgency=low
+
+  * Changed maintainer email address
+  * Changed short description (removed "A" according to policy)
+  * Added a black outline to the menu icons at upstream's request
+  * Updated to Standards-Version 3.6.1 for the upcoming release
+    (no changes needed)
+
+ -- Tobias Toedter <t.toedter@gmx.net>  Sun,  2 Nov 2003 12:58:12 +0100
+
+qbrew (0.3.3-3) unstable; urgency=low
+
+  * Included two icons to follow new menu policy
+  * Updated Standards-Version to 3.5.10 (no changes needed)
+
+ -- Tobias Toedter <t.toedter@web.de>  Sat, 31 May 2003 13:05:44 +0200
+
+qbrew (0.3.3-2) unstable; urgency=low
+
+  * Removed Build-Depend on libstdc++2.10-glibc2.2 (Closes: #192289)
+
+ -- Tobias Toedter <t.toedter@web.de>  Thu,  8 May 2003 20:52:17 +0200
+
+qbrew (0.3.3-1) unstable; urgency=low
+
+  * New maintainer (Closes: #190195, #142618)
+  * New upstream version, uses more up-to-date Qt (Closes: #188632)
+  * Removed Build-Depend on obsolete xlib6g-dev (Closes: #170175)
+  * Patched main Makefile.am and .in so that some info-files are not
+    copied twice into the package directory
+
+ -- Tobias Toedter <t.toedter@web.de>  Sat, 26 Apr 2003 17:58:25 +0200
+
+qbrew (0.3.0-2) unstable; urgency=low
+
+  * NMU
+  * Adding include of <stdlib.h> to main.cpp, c++ is a bit stricter than C
+    * This should satisfy ia643 compiler (Closes: #142618)
+
+ -- Moshe Zadka <moshez@debian.org>  Sun, 21 Apr 2002 01:10:34 -0500
+
+qbrew (0.3.0-1) unstable; urgency=low
+
+  * New upstream version.
+  * Fixed spelling mistake in description. (Closes: #125294)
+
+ -- Remi Lefebvre <remi@debian.org>  Wed, 10 Apr 2002 22:29:47 -0400
+
+qbrew (0.2.0-2) unstable; urgency=low
+
+  * Updated config.{guess,sub}. (Closes: #121623)
+
+ -- Remi Lefebvre <remi@debian.org>  Fri, 30 Nov 2001 22:40:56 -0500
+
+qbrew (0.2.0-1) unstable; urgency=low
+
+  * New upstream.
+
+ -- Remi Lefebvre <remi@debian.org>  Wed, 25 Apr 2001 21:32:55 -0400
+
+qbrew (0.1.4-3) unstable; urgency=low
+
+  * Rebuild qbrew against new qt libs. (Closes: 89783)
+  * Updated config.sub to enable build on ARM architecture. (Closes: #90490)
+
+ -- Remi Lefebvre <remi@debian.org>  Wed, 21 Mar 2001 08:58:23 -0500
+
+qbrew (0.1.4-2) unstable; urgency=low
+
+  * Recompiled to fix dependency on libmng. (Closes: #86532)
+
+ -- Remi Lefebvre <remi@debian.org>  Sun, 18 Feb 2001 20:15:43 -0500
+
+qbrew (0.1.4-1) unstable; urgency=low
+
+  * Built on new libqt2.2. (Closes: #72540)
+  * New upstream release.
+
+ -- Remi Lefebvre <remi@debian.org>  Mon, 25 Sep 2000 23:12:01 -0400
+
+qbrew (0.1.3-3) unstable; urgency=low
+
+  * Build against libqt2.1.
+
+ -- Remi Lefebvre <remi@debian.org>  Wed, 19 Jul 2000 14:22:59 -0400
+
+qbrew (0.1.3-2) unstable; urgency=low
+
+  * Added build-depend on debhelper. (Closes: #66995)
+
+ -- Remi Lefebvre <remi@debian.org>  Mon, 10 Jul 2000 12:47:45 -0400
+
+qbrew (0.1.3-1) unstable; urgency=low
+
+  * New policy standard.
+  * New upstream release.
+
+ -- Remi Lefebvre <remi@debian.org>  Fri, 16 Jun 2000 22:24:13 -0400
+
+qbrew (0.1.1-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Remi Lefebvre <remi@debian.org>  Mon, 13 Dec 1999 13:52:33 -0500
+
+qbrew (0.1.0-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Remi Lefebvre <remi@debian.org>  Tue, 23 Nov 1999 18:38:11 -0500

@@ -1,0 +1,11 @@
+Document: qbrew
+Title: The QBrew Handbook
+Author: David Johnson
+Abstract: This handbook describes what QBrew is
+ and how it can be used to
+ create beer recipes for homebrewers.
+Section: Data Management
+
+Format: HTML
+Index: /usr/share/doc/qbrew/book/handbook-index.html
+Files: /usr/share/doc/qbrew/book/*.html

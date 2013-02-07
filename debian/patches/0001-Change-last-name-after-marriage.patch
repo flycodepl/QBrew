@@ -1,0 +1,61 @@
+From: Tobias Quathamer <toddy@debian.org>
+Date: Wed, 29 Feb 2012 14:27:31 +0100
+Subject: Change last name after marriage
+
+---
+ AUTHORS                         |    2 +-
+ docs/book/handbook-credits.html |    2 +-
+ docs/handbook.docbook           |    2 +-
+ src/resource.h                  |    2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/AUTHORS b/AUTHORS
+index 4274883..ce65898 100644
+--- a/AUTHORS
++++ b/AUTHORS
+@@ -23,4 +23,4 @@ The KDE Project <www.kde.org>
+ 
+ Translators
+ -----------
+-Tobias Toedter <t.toedter@gmx.net>
++Tobias Quathamer <toddy@debian.org>
+diff --git a/docs/book/handbook-credits.html b/docs/book/handbook-credits.html
+index 7093f9c..b9277fc 100644
+--- a/docs/book/handbook-credits.html
++++ b/docs/book/handbook-credits.html
+@@ -98,7 +98,7 @@
+             </li>
+             <li>
+               <p>
+-                ...Tobias Toedter for German translation work.
++                ...Tobias Quathamer for German translation work.
+               </p>
+             </li>
+             <li>
+diff --git a/docs/handbook.docbook b/docs/handbook.docbook
+index d8715d3..cc538dd 100644
+--- a/docs/handbook.docbook
++++ b/docs/handbook.docbook
+@@ -571,7 +571,7 @@
+           contributing bug fixes.</para>
+         </listitem>
+         <listitem>
+-          <para>...Tobias Toedter for German translation work.</para>
++          <para>...Tobias Quathamer for German translation work.</para>
+         </listitem>
+         <listitem>
+           <para>...Stephen Lowrie for a lot of rote work with
+diff --git a/src/resource.h b/src/resource.h
+index 6480fa3..90a4dc1 100644
+--- a/src/resource.h
++++ b/src/resource.h
+@@ -66,7 +66,7 @@ const QByteArray CONTRIBUTORS = "Lee Henderson, "
+                                 "Stephen Lowrie, "
+                                 "Michal Palczewski, "
+                                 "Kevin Pullin, "
+-                                "Tobias Toedter";
++                                "Tobias Quathamer";
+ 
+ const QByteArray READY        = QT_TRANSLATE_NOOP("message",
+                                 "Ready");
+-- 

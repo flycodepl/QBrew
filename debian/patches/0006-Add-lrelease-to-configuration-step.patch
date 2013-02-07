@@ -1,0 +1,93 @@
+From: Tobias Quathamer <toddy@debian.org>
+Date: Thu, 1 Mar 2012 23:44:06 +0100
+Subject: Add lrelease to configuration step
+
+---
+ configure |   26 +++++++++++++++++++++++++-
+ 1 files changed, 25 insertions(+), 1 deletions(-)
+
+diff --git a/configure b/configure
+index 4e5d099..32bad2d 100755
+--- a/configure
++++ b/configure
+@@ -73,6 +73,10 @@ qmake_test() {
+         if [ -x "$result" ] ; then
+             QMAKE=$result
+         fi
++        result=$QTDIR/bin/lrelease
++        if [ -x "$result" ] ; then
++            LRELEASE=$result
++        fi
+     fi
+ 
+     # check PATH
+@@ -81,6 +85,10 @@ qmake_test() {
+         if [ -x "$result" ] ; then
+             QMAKE=$result
+         fi
++        result=`which lrelease 2>/dev/null`
++        if [ -x "$result" ] ; then
++            LRELEASE=$result
++        fi
+     fi
+ 
+     # check common rename
+@@ -89,6 +97,10 @@ qmake_test() {
+         if [ -x "$result" ] ; then
+             QMAKE=$result
+         fi
++        result=`which lrelease-q4 2>/dev/null`
++        if [ -x "$result" ] ; then
++            LRELEASE=$result
++        fi
+     fi
+ 
+     # check pkg-config
+@@ -99,6 +111,10 @@ qmake_test() {
+             if [ -x "$result" ] ; then
+                 QMAKE=$result
+             fi
++            result=$result/bin/lrelease
++            if [ -x "$result" ] ; then
++                LRELEASE=$result
++            fi
+         fi
+     fi
+ 
+@@ -112,6 +128,7 @@ qmake_test() {
+ 
+     echo "yes"
+     echo "found qmake at $QMAKE" >> $LOGFILE
++    echo "found lrelease at $LRELEASE" >> $LOGFILE
+ }
+ 
+ qtversion_test() {
+@@ -255,6 +272,7 @@ echo `date` >>$LOGFILE
+ parse_options $@
+ 
+ QMAKE=${QMAKE:-}
++LRELEASE=${LRELEASE:-}
+ PREFIX=${PREFIX:-/usr/local}
+ BINDIR=${BINDIR:-$PREFIX/bin}
+ DATADIR=${DATADIR:-$PREFIX/share/$PACKAGE}
+@@ -296,6 +314,12 @@ if [ ! -z $QMAKESPEC ] ; then
+     export QMAKESPEC
+ fi
+ 
++### create translation
++
++echo "Creating translations"
++
++$LRELEASE $PROFILE > /dev/null 2>> $LOGFILE
++
+ ### create Makefile
+ 
+ echo "Creating Makefile"
+@@ -316,4 +340,4 @@ fi
+ echo
+ echo "$PACKAGE configured successfully"
+ echo "Relax, don't worry, have a homebrew!"
+-echo
+\ No newline at end of file
++echo
+-- 

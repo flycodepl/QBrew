@@ -1,0 +1,13 @@
+qbrew for Debian
+----------------
+
+If you want to know how to start brewing yourself, there's a manual for that
+available from within the program - Menu "Help", Topic "Primer".
+
+QBrew comes with two sample recipes in the package directory,
+"/usr/share/doc/qbrew/examples". Although they look sane, I haven't tried
+them myself and cannot guarantee for the taste ;-)
+
+Happy brewing!
+
+ -- Tobias Quathamer <toddy@debian.org>, Wed, 18 Feb 2009 13:46:40 +0100

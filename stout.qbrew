@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE recipe>
+<recipe version="0.4.1" application="qbrew" >
+  <title>SQA Imperial Stout</title>
+  <brewer>Joe Sixpack</brewer>
+  <style>Imperial Stout</style>
+  <batch quantity="5.000 gal" />
+  <grains>
+    <grain use="Mashed" extract="1.037" quantity="10.000 lb" type="Grain" color="1.8" >American two-row</grain>
+    <grain use="Mashed" extract="1.027" quantity="0.500 lb" type="Grain" color="500" >British black patent</grain>
+    <grain use="Steeped" extract="1.027" quantity="1.000 lb" type="Grain" color="500" >Black Barley</grain>
+    <grain use="Mashed" extract="1.034" quantity="2.000 lb" type="Grain" color="350" >British chocolate malt</grain>
+  </grains>
+  <hops>
+    <hop type="Pellet" alpha="9.2" quantity="2.000 oz" time="60" >Northern Brewer</hop>
+    <hop type="Pellet" alpha="9.2" quantity="1.000 oz" time="20" >Northern Brewer</hop>
+  </hops>
+  <miscingredients>
+    <miscingredient quantity="1.000 unit" notes="" type="Yeast" >Wyeast Irish 1084</miscingredient>
+  </miscingredients>
+</recipe>

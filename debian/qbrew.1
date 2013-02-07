@@ -1,0 +1,58 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH QBREW 1 "February 18, 2009"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+qbrew \- homebrewer's recipe calculator (uses Qt)
+.SH SYNOPSIS
+.B qbrew
+.RI [ options ] " file"
+.SH DESCRIPTION
+This manual page documents briefly the
+.B qbrew
+command.
+This manual page was written for the Debian distribution
+because the original program does not have a manual page.
+Instead, it has documentation in the html format viewable
+from within the program.
+.PP
+.B qbrew
+is a recipe calculator for homebrewed beers.
+In addition to managing recipes, it provides facilities for
+creating new beer recipes.
+It uses Qt for its graphical user interface.
+.SH OPTIONS
+This program follows the usual GNU command line syntax, with long
+options starting with two dashes (`\-').
+.B qbrew
+supports the standard options for Qt and the X Window System (\-style,
+\-geometry, \-display and others).
+In addition, the following options are used:
+.TP
+.B \-h, \-\-help
+Show summary of options.
+.TP
+.B \-v, \-\-version
+Show version of program.
+.TP
+.I file
+Start the program and open the specified file.
+.SH AUTHOR
+.B qbrew
+was written by David Johnson <david@usermode.org>.
+Please send any bug reports to him.
+This manual page was written by Tobias Quathamer <toddy@debian.org>,
+for the Debian project (but may be used by others).

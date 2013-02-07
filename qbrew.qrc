@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>pics/icons/back.png</file>
+        <file>pics/icons/configure.png</file>
+        <file>pics/icons/contents.png</file>
+        <file>pics/icons/contexthelp.png</file>
+        <file>pics/icons/down.png</file>
+        <file>pics/icons/editcopy.png</file>
+        <file>pics/icons/editcut.png</file>
+        <file>pics/icons/editpaste.png</file>
+        <file>pics/icons/exit.png</file>
+        <file>pics/icons/fileexport.png</file>
+        <file>pics/icons/filenew.png</file>
+        <file>pics/icons/fileopen.png</file>
+        <file>pics/icons/filepagesetup.png</file>
+        <file>pics/icons/fileprint.png</file>
+        <file>pics/icons/filesave.png</file>
+        <file>pics/icons/filesaveas.png</file>
+        <file>pics/icons/find.png</file>
+        <file>pics/icons/forward.png</file>
+        <file>pics/icons/gohome.png</file>
+        <file>pics/icons/minus.png</file>
+        <file>pics/icons/plus.png</file>
+        <file>pics/icons/redo.png</file>
+        <file>pics/icons/reload.png</file>
+        <file>pics/icons/undo.png</file>
+        <file>pics/icons/up.png</file>
+        <file>pics/icons/viewzoomin.png</file>
+        <file>pics/icons/viewzoomout.png</file>
+        <file>pics/qbrew.png</file>
+    </qresource>
+</RCC>

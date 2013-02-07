@@ -1,0 +1,37 @@
+From: Tobias Quathamer <toddy@debian.org>
+Date: Wed, 29 Feb 2012 14:23:48 +0100
+Subject: Adjust installation and cleanup routines
+
+---
+ qbrew.pro |   10 ++++++++--
+ 1 files changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/qbrew.pro b/qbrew.pro
+index 2460a7b..02f437a 100755
+--- a/qbrew.pro
++++ b/qbrew.pro
+@@ -15,6 +15,8 @@ UI_DIR = build
+ INCLUDEPATH += src
+ VPATH = src
+ 
++QMAKE_DISTCLEAN = config.log
++
+ win32 {
+     RC_FILE = win\icon.rc
+     CONFIG -= console
+@@ -74,8 +76,12 @@ unix:!macx {
+ 
+     trans.files = translations/*.qm
+     data.files = data/* pics/splash.png
+-    doc.files = docs/book/*.html docs/primer/*.html README LICENSE
+-    INSTALLS += target trans data doc 
++    # The handbook and the primer are installed in a different
++    # location. The files README and LICENSE are copied by the
++    # dh_installdocs script
++    #doc.files = docs/book/*.html docs/primer/*.html README LICENSE
++    #INSTALLS += target trans data doc
++    INSTALLS += target trans data
+ }
+ 
+ RESOURCES = qbrew.qrc
+-- 

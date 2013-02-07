@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+# This target creates the pixmaps used for the menu
+# It requires sodipodi and mogrify to be installed
+generate-xpm:
+	sodipodi --without-gui --export-area=10.56:104.84:182.27:276.56 \
+		--export-height=16  --file=pics/qbrew.svg \
+		--export-png=debian/qbrew_16x16.png
+	sodipodi --without-gui --export-area=10.56:104.84:182.27:276.56 \
+		--export-height=32  --file=pics/qbrew.svg \
+		--export-png=debian/qbrew_32x32.png
+	mogrify -format xpm debian/qbrew_16x16.png
+	mogrify -format xpm debian/qbrew_32x32.png
+	rm -f debian/qbrew_16x16.png debian/qbrew_32x32.png
+
+%:
+	dh $@
+
+# dh_auto_configure does not work with this package, thus
+# we need to call the configure script manually.
+override_dh_auto_configure:
+	LDFLAGS="-Wl,--as-needed $(LDFLAGS)" ./configure --debug --prefix=/usr
+
+# Install the two pixmaps for the menu
+override_dh_auto_install:
+	dh_auto_install
+	install -m 0644 debian/qbrew_16x16.xpm $(CURDIR)/debian/qbrew/usr/share/pixmaps
+	install -m 0644 debian/qbrew_32x32.xpm $(CURDIR)/debian/qbrew/usr/share/pixmaps

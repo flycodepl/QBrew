@@ -1,0 +1,9 @@
+Document: qbrew-primer
+Title: The QBrew Brewing Primer
+Author: David Johnson
+Abstract: The Brewing Primer describes how to brew your first beer yourself.
+Section: Data Management
+
+Format: HTML
+Index: /usr/share/doc/qbrew/primer/primer.html
+Files: /usr/share/doc/qbrew/primer/*.html

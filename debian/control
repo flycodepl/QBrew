@@ -1,0 +1,16 @@
+Source: qbrew
+Section: x11
+Priority: extra
+Maintainer: Tobias Quathamer <toddy@debian.org>
+Build-Depends: debhelper (>= 9), libqt4-dev
+Standards-Version: 3.9.3
+Homepage: http://www.usermode.org/code.html
+
+Package: qbrew
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Homebrewer's recipe calculator
+ QBrew is a recipe calculator for homebrewed beers. It uses Qt for creating
+ its graphical user interface and provides facilities for creating own beer
+ recipes. It even has a manual describing how to brew your first beer
+ yourself!

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=QBrew
+Comment=Homebrewer's recipe calculator
+Comment[de]=Rezeptrechner für Bierbrauer
+TryExec=qbrew
+Exec=qbrew
+Icon=qbrew_32x32
+Categories=Utility;Qt;
